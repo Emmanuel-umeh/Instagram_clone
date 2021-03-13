@@ -16,11 +16,21 @@ export default class Register extends Component {
         }
     }
 
-    signUp = ()=>{
-const {email, password, name} = this.state
+    signUp =  async()=>{
+
+        try {
+            const {email, password, name} = this.state
 // if(email.length || password || !name){
 //     console.log(
 // }
+
+var response  =await  firebase.auth.createUserWithEmailAndPassword(email,password)
+
+console.log({response})
+        } catch (error) {
+            console.log({error})
+        }
+
     }
     render() {
         return (
