@@ -17,7 +17,10 @@ export default class Register extends Component {
     }
 
     signUp = ()=>{
-
+const {email, password, name} = this.state
+// if(email.length || password || !name){
+//     console.log(
+// }
     }
     render() {
         return (
