@@ -34,7 +34,7 @@ console.log({response})
     }
     render() {
         return (
-            <View>
+            <View style = {styles.container}>
 
 <TextInput placeholder = "name" onChangeText ={(name)=>{
     this.setState({
