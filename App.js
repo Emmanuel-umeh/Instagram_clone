@@ -7,7 +7,7 @@ import RegisterScreen from "./components/auth/Register"
 import LoginScreen from "./components/auth/Login"
 import * as firebase from 'firebase';
 
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Button } from 'react-native';
 
 // Optionally import the services that you want to use
 //import "firebase/auth";
@@ -117,6 +117,8 @@ firebase.auth().onAuthStateChanged((user)=>{
         <Text>
           User is Logged in
         </Text>
+
+        <Button title ="Sign out"></Button>
       </View>
         
       )
