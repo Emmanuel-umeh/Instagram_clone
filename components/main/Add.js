@@ -20,25 +20,36 @@ export default function Add() {
     return <Text>No access to camera</Text>;
   }
   return (
+
+    <View style = {styles.container}>
+
+
+
     <View style={styles.container}>
-      <Camera style={styles.camera} type={type}>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => {
-              setType(
-                type === Camera.Constants.Type.back
-                  ? Camera.Constants.Type.front
-                  : Camera.Constants.Type.back
-              );
-            }}>
-            <Text style={styles.text}> Flip </Text>
-          </TouchableOpacity>
-        </View>
-      </Camera>
+      <Camera style={styles.camera} type={type}
+      
+      />
     </View>
+
+<View style={styles.buttonContainer}>
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => {
+    setType(
+      type === Camera.Constants.Type.back
+        ? Camera.Constants.Type.front
+        : Camera.Constants.Type.back
+    );
+  }}>
+  <Text style={styles.text}> Flip </Text>
+</TouchableOpacity>
+</View>
+
+</View>
   );
 }
+
+
 
 
 const styles = StyleSheet.create({ 
