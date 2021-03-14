@@ -96,11 +96,7 @@ export default function Add() {
       <TouchableOpacity
         style={styles.galleryButton}
         onPress={() => {
-          setType(
-            type === Camera.Constants.Type.back
-              ? Camera.Constants.Type.front
-              : Camera.Constants.Type.back
-          );
+         pickImage
         }}
       >
         <Icon
@@ -117,7 +113,7 @@ export default function Add() {
       {/* open gallery button ends */}
 
       <View style={styles.take_picture_container}>
-        <Button onPress={pickImage}>
+        <Button onPress={takePicture}>
           <Text>Take Picture</Text>
         </Button>
       </View>
