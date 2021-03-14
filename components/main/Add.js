@@ -83,7 +83,7 @@ if(camera){
 
       
     </View>
-    <View style={styles.buttonContainer}>
+    <View style={styles.galleryContainer}>
 
         
     <TouchableOpacity  style={styles.button}   onPress={() => {
