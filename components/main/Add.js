@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 35,
     marginTop: 10,
-    marginLeft: 30,
+    marginLeft: 0,
     position: "absolute",
   },
   text: {
