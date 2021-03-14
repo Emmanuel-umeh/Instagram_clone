@@ -31,6 +31,19 @@ export default function Add() {
       ratio = {'1:1'}
       
       />
+<View style={styles.buttonContainer}>
+<Button
+  style={styles.button}
+  onPress={() => {
+    setType(
+      type === Camera.Constants.Type.back
+        ? Camera.Constants.Type.front
+        : Camera.Constants.Type.back
+    );
+  }}>
+  <Text style={styles.text}> Flip </Text>
+</Button>
+</View>
 
       
     </View>
@@ -50,7 +63,8 @@ const styles = StyleSheet.create({
     },
     cameraContainer : {
         flex : 1,
-        flexDirection  : "row"
+        flexDirection  : "row",
+         position : "absolute"
     },
     fixedRatio : {
         flex : 1,
