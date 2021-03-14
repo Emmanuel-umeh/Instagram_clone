@@ -3,7 +3,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 // connect
-export default class Main extends Component {
+class Main extends Component {
+
+    constructor(props){
+        super(props)
+    }
 
     componentDidMount(){
         this.props.fetchUser()
@@ -21,3 +25,6 @@ export default class Main extends Component {
         )
     }
 }
+
+
+export default connect(Main)
