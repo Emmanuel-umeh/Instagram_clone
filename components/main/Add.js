@@ -162,11 +162,7 @@ const styles = StyleSheet.create({
         flex : 1,
         backgroundColor  : "transparent"
     },
-  galleryContainer : {
-        flexDirection : "row",
-        flex : 1,
-        backgroundColor  : "transparent"
-    },
+
     button  : {
         flex : 0.15,
         alignSelf : "center", 
@@ -176,9 +172,15 @@ const styles = StyleSheet.create({
         marginTop : 70,
         marginLeft : 30
     },
-    galleryButton  : {
-        flex : 0.15,
+
+    galleryContainer : {
         flexDirection : "row",
+        flex : 1,
+        backgroundColor  : "transparent"
+    },
+    galleryButton  : {
+        // flex : 0.15,
+        // flexDirection : "row",
         alignSelf : "flex-end", 
         // alignItems : "",
         color : "white", 
