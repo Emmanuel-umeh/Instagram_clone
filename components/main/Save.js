@@ -2,7 +2,6 @@ import { Button, Text, View } from "native-base";
 import React, {useState} from "react";
 import { Image, StyleSheet } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
-import { useState } from "react/cjs/react.development";
 import firebase from "firebase";
 require("firebase/firestore");
 require("firebase/firebase-storage");
