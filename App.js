@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {Component} from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LandingScreen from "./components/auth/Landing"
 import RegisterScreen from "./components/auth/Register"
 import * as firebase from 'firebase';
+
 
 // Optionally import the services that you want to use
 //import "firebase/auth";
@@ -31,9 +32,28 @@ var firebaseConfig = {
 
 
 const Stack = createStackNavigator()
-export default function App() {
-  return (
-    <NavigationContainer>
+
+
+
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  constructor(props){
+    super(props)
+
+    this.state ={
+      loaded : false
+    }
+  }
+
+
+  componentDidMount(){
+
+
+  }
+  render() {
+    return (
+      <NavigationContainer>
 
       <Stack.Navigator initialRouteName = "Landing">
         <Stack.Screen name = "Landing" component = {LandingScreen} options = {{
@@ -46,6 +66,7 @@ export default function App() {
       </Stack.Navigator>
     
   </NavigationContainer>
-  );
+    )
+  }
 }
 
