@@ -8,7 +8,7 @@ import LoginScreen from "./components/auth/Login"
 import * as firebase from 'firebase';
 
 import { Text, View, StyleSheet, Button } from 'react-native';
-import store from "./store"
+import store from "./redux/store"
 import MainScreen from "./components/Main"
 import { Provider } from 'react-redux';
 
