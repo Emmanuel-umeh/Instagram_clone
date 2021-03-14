@@ -36,22 +36,47 @@ const Stack = createStackNavigator()
 
 
 import React, { Component } from 'react'
+import { Text, View } from 'react-native';
 
 export default class App extends Component {
   constructor(props){
     super(props)
 
     this.state ={
-      loaded : false
+      loaded : false,
+      loggedIn  :false
     }
   }
 
 
   componentDidMount(){
-firebase.auth().onAuthStateChanged
+firebase.auth().onAuthStateChanged((user)=>{
+  if(!user){
+    this.setState({
+      loading : true,
+      loggedIn : false
+    })
+  }else{
+
+    this.setState({
+      loading : true,
+      loggedIn : true
+    })
+  }
+})
 
   }
   render() {
+
+    const { loggedIn, loaded} = this.state
+
+    if(!loaded){
+      return(
+        <View>
+          <Text>loading</Text>
+        </View>
+      )
+    }
     return (
       <NavigationContainer>
 
