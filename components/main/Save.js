@@ -15,7 +15,8 @@ export default function Save(props) {
   uploadImage = async () => {
     const response = await fetch(image);
     const blob = await response.blob();
-    const task = firebase.storage().ref().child(`post/${firebase.auth().currentUser.uid}/${Math.random().toString(36)}`);
+    const childPath = `post/${firebase.auth().currentUser.uid}/${Math.random().toString(36)}`
+    const task = firebase.storage().ref().child(childPath);
   };
   return (
     <View style={styles.container}>
