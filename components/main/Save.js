@@ -15,7 +15,7 @@ export default function Save(props) {
   uploadImage = async () => {
     const response = await fetch(image);
     const blob = await response.blob();
-    const task = firebase.storage().ref().child();
+    const task = firebase.storage().ref().child(`post/${}`);
   };
   return (
     <View style={styles.container}>
