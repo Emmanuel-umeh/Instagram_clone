@@ -22,8 +22,8 @@ export default function Save(props) {
         console.log(`transferred : ${snapShot.bytesTransferred}`)
     }
 
-    const taskCompleted = snapShot =>{
-        snapShot.ref.getDownloadUrl().then((snapshot)=>{
+    const taskCompleted = () =>{
+        task.snapShot.ref.getDownloadUrl().then((snapshot)=>{
             console.log({snapShot})
         }) 
     }
