@@ -41,7 +41,7 @@ class Main extends Component {
         }} />
         <Tab.Screen name="Add" component={AddScreen} options ={{
             tabBarIcon : ({color , size}) =>(
-                <Icon name = "pluscircleo" style ={{
+                <Icon name = "ios-add-circle" style ={{
                     color : color,
                     fontSize : size
                 }} />
