@@ -179,8 +179,8 @@ const styles = StyleSheet.create({
         backgroundColor  : "transparent"
     },
     galleryButton  : {
-        // flex : 0.15,
-        // flexDirection : "row",
+        flex : 0.15,
+        flexDirection : "row",
         alignSelf : "flex-end", 
         // alignItems : "",
         color : "white", 
