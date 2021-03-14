@@ -14,6 +14,11 @@ export default function Add() {
     })();
   }, []);
 
+
+  const takePicture = async() =>{
+      
+  }
+
   if (hasPermission === null) {
     return <View />;
   }
@@ -57,7 +62,7 @@ export default function Add() {
 </View>
 
 <View style= {styles.take_picture_container}>
-    <Button onPress = {this.takePicture} ><Text>Take Picture</Text></Button>
+    <Button onPress = {takePicture} ><Text>Take Picture</Text></Button>
 </View>
 
 
