@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet,TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
-import { Button, Text, View, } from 'native-base';
+import { Button, Icon, Text, View, } from 'native-base';
 
 export default function Add() {
   const [hasPermission, setHasPermission] = useState(null);
@@ -35,7 +35,7 @@ export default function Add() {
       
     </View>
     <View style={styles.buttonContainer}>
-<Button
+<Icon name = "ios-switch"
   style={styles.button}
   onPress={() => {
     setType(
@@ -44,8 +44,8 @@ export default function Add() {
         : Camera.Constants.Type.back
     );
   }}>
-  <Text style={styles.text}> Flip </Text>
-</Button>
+  {/* <Text style={styles.text}> Flip </Text> */}
+</Icon>
 </View>
 
 
