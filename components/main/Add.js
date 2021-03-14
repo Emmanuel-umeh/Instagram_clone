@@ -21,7 +21,14 @@ export default function Add() {
         const  gallery_status = await ImagePicker.requestMediaLibraryPermissionsAsync();
         if (gallery_status.status !== 'granted') {
           alert('Sorry, we need camera roll permissions to make this work!');
+        }else{
+
+
+            setHasGalleryPermission(gallery_status.status === 'granted');
+
+
         }
+
       }
     })();
   }, []);
