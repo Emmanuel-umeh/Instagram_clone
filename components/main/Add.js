@@ -53,5 +53,10 @@ const styles = StyleSheet.create({
         flexDirection : "row",
         flex : 1,
         backgroundColor  : "transparent"
+    },
+    button  : {
+        flex : 0.1,
+        alignSelf : "flex-end", 
+        alignItems : "center"
     }
  }); 
