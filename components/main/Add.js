@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
+import { Button } from 'native-base';
 
 export default function Add() {
   const [hasPermission, setHasPermission] = useState(null);
@@ -32,7 +33,7 @@ export default function Add() {
     </View>
 
 <View style={styles.buttonContainer}>
-<TouchableOpacity
+<Button
   style={styles.button}
   onPress={() => {
     setType(
@@ -42,7 +43,7 @@ export default function Add() {
     );
   }}>
   <Text style={styles.text}> Flip </Text>
-</TouchableOpacity>
+</Button>
 </View>
 
 </View>
