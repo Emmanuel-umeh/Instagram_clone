@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     cameraContainer : {
         flex : 1,
         flexDirection  : "row",
-         position : "absolute"
+        //  position : "absolute"
     },
     fixedRatio : {
         flex : 1,
