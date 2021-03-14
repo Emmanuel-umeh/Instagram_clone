@@ -21,9 +21,19 @@ class Main extends Component {
         console.log({currentUser})
         return (
       <View style = {styles.container}>
+
+          {currentUser ?
+          
+          <Text>
+          {currentUser.name} is Logged in
+        </Text> : 
+        
+        
         <Text>
-          User is Logged in
-        </Text>
+        Loading...
+      </Text>
+        }
+       
 
         <Button onPress={this.signOutUser} ><Text>SignOut</Text></Button>
       </View> 
