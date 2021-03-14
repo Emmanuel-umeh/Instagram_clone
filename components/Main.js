@@ -39,7 +39,7 @@ class Main extends Component {
                 }} />
             )
         }} />
-        <Tab.Screen name="Add" component={Add} options ={{
+        <Tab.Screen name="Add" component={AddScreen} options ={{
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "plus" style ={{
                     color : color,
@@ -47,7 +47,7 @@ class Main extends Component {
                 }} />
             )
         }} />
-        <Tab.Screen name="Profile" component={Profile} options ={{
+        <Tab.Screen name="Profile" component={ProfileScreen} options ={{
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "home" style ={{
                     color : color,
