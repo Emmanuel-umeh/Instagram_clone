@@ -12,8 +12,8 @@ export default function Save(props) {
 
     const [caption, setCaption] = useState("")
 
-    uploadImage = ()=>{
-
+    uploadImage =  async ()=>{
+        const response = await fetch(image)
     }
     return (
      <View style = {styles.container}>
