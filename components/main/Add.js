@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     },
     galleryButton  : {
         flex : 0.15,
-        alignSelf : "flex-end", 
+        alignSelf : "flex-start", 
         // alignItems : "",
         color : "white", 
         fontSize :35,
