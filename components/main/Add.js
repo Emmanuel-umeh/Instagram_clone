@@ -95,9 +95,9 @@ export default function Add() {
 
       <TouchableOpacity
         style={styles.galleryButton}
-        onPress={() => {
+        onPress={
          pickImage
-        }}
+        }
       >
         <Icon
           style={{
