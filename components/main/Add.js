@@ -176,13 +176,13 @@ const styles = StyleSheet.create({
         marginTop : 70,
         marginLeft : 30
     },
-    button  : {
+    galleryButton  : {
         flex : 0.15,
-        alignSelf : "center", 
-        alignItems : "center",
+        alignSelf : "flex-end", 
+        // alignItems : "",
         color : "white", 
         fontSize :35,
-        marginTop : 70,
+        marginTop : 10,
         marginLeft : 30
     },
     text : {
