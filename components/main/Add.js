@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     },
     button  : {
         flex : 0.15,
-        alignSelf : "flex-end", 
+        alignSelf : "baseline", 
         alignItems : "center"
     },
     text : {
