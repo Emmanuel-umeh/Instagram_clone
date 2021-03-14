@@ -43,10 +43,10 @@ if(camera){
 }
   }
 
-  if (hasPermission === null) {
+  if (hasPermission === null || hasGalleryPermission === null) {
     return <View />;
   }
-  if (hasPermission === false) {
+  if (hasPermission === false || hasGalleryPermission === null) {
     return <Text>No access to camera</Text>;
   }
   return (
