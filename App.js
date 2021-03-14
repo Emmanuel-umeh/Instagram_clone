@@ -100,13 +100,21 @@ firebase.auth().onAuthStateChanged((user)=>{
       
     </NavigationContainer>
       )
-    }else{
-      <View>
+    }
+
+
+    if(loggedIn){
+      return(
+<View>
         <Text>
           User is Logged in
         </Text>
       </View>
+        
+      )
     }
+      
+    
    
   }
 }
