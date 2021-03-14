@@ -34,7 +34,7 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
 }, dispatch)
 
 const mapStateToProps =(store)=>({
-    currentUser : store.user
+    currentUser : store.userState
 })
 
 export default connect(null, mapStateToProps, mapDispatchToProps)(Main)
