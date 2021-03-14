@@ -36,7 +36,7 @@ export default function Add() {
     </View>
     <View style={styles.buttonContainer}>
 
-    <TouchableOpacity   onPress={() => {
+    <TouchableOpacity  style={styles.button}   onPress={() => {
     setType(
       type === Camera.Constants.Type.back
         ? Camera.Constants.Type.front
@@ -44,7 +44,7 @@ export default function Add() {
     );
   }}>
     <Icon name = "swap-horizontal"
-  style={styles.button}
+ 
 >
   {/* <Text style={styles.text}> Flip </Text> */}
 </Icon>
