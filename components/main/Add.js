@@ -86,7 +86,7 @@ if(camera){
     <View style={styles.galleryContainer}>
 
         
-    <TouchableOpacity  style={styles.button}   onPress={() => {
+    <TouchableOpacity  style={styles.galleryButton}   onPress={() => {
     setType(
       type === Camera.Constants.Type.back
         ? Camera.Constants.Type.front
@@ -166,6 +166,15 @@ const styles = StyleSheet.create({
         flexDirection : "row",
         flex : 1,
         backgroundColor  : "transparent"
+    },
+    button  : {
+        flex : 0.15,
+        alignSelf : "center", 
+        alignItems : "center",
+        color : "white", 
+        fontSize :35,
+        marginTop : 70,
+        marginLeft : 30
     },
     button  : {
         flex : 0.15,
