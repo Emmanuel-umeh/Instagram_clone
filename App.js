@@ -40,7 +40,7 @@ export default class App extends Component {
     super(props)
 
     this.state ={
-      loaded : false,
+      loaded : true,
       loggedIn  :false
     }
   }
