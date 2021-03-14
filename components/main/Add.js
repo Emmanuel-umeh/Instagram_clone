@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet,TouchableOpacity, Image } from 'react-native';
 import { Camera } from 'expo-camera';
 import { Button, Icon, Text, View, } from 'native-base';
-
+import * as ImagePicker from 'expo-image-picker';
 export default function Add() {
   const [hasCameraPermission, setHasCameraPermission] = useState(null);
   const [hasGalleryPermission, setHasGalleryPermission] = useState(null);
