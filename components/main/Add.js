@@ -48,5 +48,10 @@ const styles = StyleSheet.create({
     },
     camera : {
         flex : 1
+    },
+    buttonContainer : {
+        flexDirection : "row",
+        flex : 1,
+        backgroundColor  : "transparent"
     }
  }); 
