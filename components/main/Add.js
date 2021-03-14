@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     // alignItems : "center",
     color: "white",
     fontSize: 35,
-    marginTop: 70,
+    marginTop: 60,
     marginLeft: 30,
   },
 
