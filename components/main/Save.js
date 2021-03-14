@@ -8,7 +8,7 @@ export default function Save(props) {
     console.log(props.route.params)
     const {image} = props.route.params
 
-    const [caption, captionChanged] = useState("")
+    const [caption, setCaption] = useState("")
     return (
      <View style = {styles.container}>
 
@@ -16,7 +16,7 @@ export default function Save(props) {
     uri : image
 }} />
 
-<TextInput placeholder = "Write a caption. . ." onChangeText ={captionChanged} />
+<TextInput placeholder = "Write a caption. . ." onChangeText ={setCaption} />
      </View>
     )
 }
