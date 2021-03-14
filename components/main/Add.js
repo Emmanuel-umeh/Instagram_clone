@@ -118,7 +118,7 @@ setType(
 <Icon style ={{
     color : "white",
      fontSize : 35
-}} name = "swap-horizontal"
+}} name = "md-images-outline"
 
 >
 {/* <Text style={styles.text}> Flip </Text> */}
