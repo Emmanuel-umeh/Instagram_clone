@@ -10,7 +10,7 @@ export  function  fetchUser(){
         .get().then(currentUser =>{
             if(currentUser.exists){
 
-                console.log(currentUser.data)
+                console.log(currentUser.data())
                 dispatch({
                     type : USER_STATE_CHANGED, 
                     currentUser : currentUser.data()
