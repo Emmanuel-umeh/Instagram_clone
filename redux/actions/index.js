@@ -12,7 +12,7 @@ export  function  fetchUser(){
 
 
                 // access the current user data
-                console.log(currentUser.data())
+                // console.log(currentUser.data())
                 dispatch({
                     type : USER_STATE_CHANGED, 
                     currentUser : currentUser.data()
