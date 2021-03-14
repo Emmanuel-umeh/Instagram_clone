@@ -23,7 +23,7 @@ export default function Save(props) {
 
     const taskCompleted = () =>{
         task.snapshot.ref.getDownloadUrl().then((snapshot)=>{
-            console.log({snapShot})
+            console.log({snapshot})
         }) 
     }
     const taskError = snapShot =>{
