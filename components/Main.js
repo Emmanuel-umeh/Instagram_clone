@@ -7,6 +7,7 @@ import {fetchUser}  from "../redux/actions/index"
 
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import FeedScreen from './main/Feed'
 
 const Tab = createBottomTabNavigator();
 // connect
@@ -28,7 +29,7 @@ class Main extends Component {
 
 
         <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Feed" component={FeedScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
         
