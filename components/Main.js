@@ -42,7 +42,7 @@ class Main extends Component {
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "home" style ={{
                     color : color,
-                    fontSize : size
+                    fontSize : 40
                 }} />
             )
         }} />
