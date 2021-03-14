@@ -8,9 +8,14 @@ export default class Main extends Component {
     }
     render() {
         return (
-            <div>
-                
-            </div>
+      <View style = {styles.container}>
+        <Text>
+          User is Logged in
+        </Text>
+
+        <Button onPress={this.signOutUser} title ="Sign out"></Button>
+      </View> 
+        
         )
     }
 }
