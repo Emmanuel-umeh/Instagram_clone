@@ -105,7 +105,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 
     if(loggedIn){
       return(
-<View>
+<View style = {styles.container}>
         <Text>
           User is Logged in
         </Text>
