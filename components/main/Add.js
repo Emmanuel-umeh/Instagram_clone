@@ -78,7 +78,9 @@ const styles = StyleSheet.create({
     button  : {
         flex : 0.15,
         alignSelf : "center", 
-        alignItems : "center"
+        alignItems : "center",
+        color : "white", 
+        fontSize :20
     },
     text : {
         fontSize : 18,
