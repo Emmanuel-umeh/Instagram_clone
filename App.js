@@ -53,13 +53,13 @@ firebase.auth().onAuthStateChanged((user)=>{
     
     console.log("user isnt logged in")
     this.setState({
-      loading : true,
+      loaded : true,
       loggedIn : false
     })
   }else{
 
     this.setState({
-      loading : true,
+      loaded : true,
       loggedIn : true
     })
   }
