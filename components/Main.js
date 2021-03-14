@@ -30,7 +30,7 @@ class Main extends Component {
 
         <Tab.Navigator>
         <Tab.Screen name="Feed" component={FeedScreen} options ={{
-            tabBarIcon
+            tabBarIcon : 
         }} />
         {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
       </Tab.Navigator>
