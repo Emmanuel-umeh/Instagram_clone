@@ -85,6 +85,25 @@ if(camera){
     </View>
     <View style={styles.buttonContainer}>
 
+        
+    <TouchableOpacity  style={styles.button}   onPress={() => {
+    setType(
+      type === Camera.Constants.Type.back
+        ? Camera.Constants.Type.front
+        : Camera.Constants.Type.back
+    );
+  }}>
+    <Icon style ={{
+        color : "white",
+         fontSize : 35
+    }} name = "swap-horizontal"
+ 
+>
+  {/* <Text style={styles.text}> Flip </Text> */}
+</Icon>
+
+    </TouchableOpacity>
+
     <TouchableOpacity  style={styles.button}   onPress={() => {
     setType(
       type === Camera.Constants.Type.back
@@ -139,6 +158,11 @@ const styles = StyleSheet.create({
         aspectRatio : 1
     },
     buttonContainer : {
+        flexDirection : "row",
+        flex : 1,
+        backgroundColor  : "transparent"
+    },
+  galleryContainer : {
         flexDirection : "row",
         flex : 1,
         backgroundColor  : "transparent"
