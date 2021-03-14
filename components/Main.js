@@ -42,7 +42,7 @@ class Main extends Component {
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "home" style ={{
                     color : color,
-                    fontSize : 40
+                    fontSize : 30
                 }} />
             )
         }} />
@@ -63,7 +63,7 @@ class Main extends Component {
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "ios-add-circle" style ={{
                     color : color,
-                    fontSize : size
+                   fontSize : 30
                 }} />
             )
         }} />
@@ -71,7 +71,7 @@ class Main extends Component {
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "ios-person" style ={{
                     color : color,
-                    fontSize : size
+                   fontSize : 30
                 }} />
             )
         }} />
