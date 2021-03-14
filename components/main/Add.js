@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
     take_picture_container : {
         flex : 1,
         flexDirection : "row", 
-        alignItems : "center"
+        alignItems : "center",
+        marginTop : 399
     }
  }); 
