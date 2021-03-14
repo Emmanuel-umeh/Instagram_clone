@@ -15,6 +15,10 @@ class Main extends Component {
         this.props.fetchUser()
     }
     render() {
+
+        const {currentUser} = this.props
+
+        console.log({currentUser})
         return (
       <View style = {styles.container}>
         <Text>
