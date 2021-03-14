@@ -37,7 +37,7 @@ const mapStateToProps =(store)=>({
     currentUser : store.userState
 })
 
-export default connect(null, mapStateToProps, mapDispatchToProps)(Main)
+export default connect( mapStateToProps, mapDispatchToProps)(Main)
 
 
 const styles = StyleSheet.create({
