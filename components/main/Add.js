@@ -186,6 +186,7 @@ const styles = StyleSheet.create({
         // flex : 1,
         // flexDirection : "row",
         alignSelf : "flex-end", 
+        justifyContent : "flex-end",
         // alignItems : "",
         color : "white", 
         fontSize :35,
