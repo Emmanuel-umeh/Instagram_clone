@@ -1,5 +1,9 @@
 import firebase from "firebase"
 
+import {
+    USER_STATE_CHANGED
+} from "../constants/index"
+
 export async function  fetchUser(){
     return((dispatch ) =>{
     let currentUser  = await   firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
