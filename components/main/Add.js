@@ -102,9 +102,9 @@ const styles = StyleSheet.create({
         color : "white"
     },
     take_picture_container : {
-        flex : 1,
-        flexDirection : "row", 
-        alignItems : "center",
-        top :300 
+        // flex : 1,
+        // flexDirection : "row", 
+        // alignItems : "center",
+        // top :300 
     }
  }); 
