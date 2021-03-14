@@ -33,7 +33,11 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
     fetchUser
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(Main)
+const mapStateToProps =(store)=>({
+    currentUser : store.userState.currentUser
+})
+
+export default connect(null, mapStateToProps, mapDispatchToProps)(Main)
 
 
 const styles = StyleSheet.create({
