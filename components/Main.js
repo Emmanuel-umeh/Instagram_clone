@@ -37,7 +37,7 @@ class Main extends Component {
 
 
 
-        <Tab.Navigator initialRouteName = "Feed">
+        <Tab.Navigator initialRouteName = "Feed" labeled = {false}>
         <Tab.Screen name="Feed" component={FeedScreen} options ={{
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "home" style ={{
