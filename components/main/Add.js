@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet,TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
-import { Button, Icon, Text, View, } from 'native-base';
+import { Button, Icon, Image, Text, View, } from 'native-base';
 
 export default function Add() {
   const [hasPermission, setHasPermission] = useState(null);
@@ -76,6 +76,11 @@ if(camera){
     <Button onPress = {takePicture} ><Text>Take Picture</Text></Button>
 </View>
 
+{image && 
+<Image style ={
+    styles.image_preview
+} source = {{uri : image}}/>}
+
 
 </View>
   );
@@ -125,5 +130,8 @@ const styles = StyleSheet.create({
         // top :300 
 
         alignSelf : "center"
+    },
+    image_preview : {
+        flex : 1
     }
  }); 
