@@ -117,7 +117,7 @@ export default function Add() {
       {/* open gallery button ends */}
 
       <View style={styles.take_picture_container}>
-        <Button onPress={takePicture}>
+        <Button onPress={pickImage}>
           <Text>Take Picture</Text>
         </Button>
       </View>
