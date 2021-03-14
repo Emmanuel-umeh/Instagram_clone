@@ -60,6 +60,8 @@ const styles = StyleSheet.create({
         alignItems : "center"
     },
     text : {
-        fontSize : 10
+        fontSize : 18,
+        marginBottom : 10,
+        color : "white"
     }
  }); 
