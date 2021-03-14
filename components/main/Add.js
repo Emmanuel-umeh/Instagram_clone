@@ -31,7 +31,10 @@ export default function Add() {
       ratio = {'1:1'}
       
       />
-<View style={styles.buttonContainer}>
+
+      
+    </View>
+    <View style={styles.buttonContainer}>
 <Button
   style={styles.button}
   onPress={() => {
@@ -44,9 +47,6 @@ export default function Add() {
   <Text style={styles.text}> Flip </Text>
 </Button>
 </View>
-
-      
-    </View>
 
 
 </View>
