@@ -115,14 +115,8 @@ firebase.auth().onAuthStateChanged((user)=>{
 
     if(loggedIn){
       return(
-<View style = {styles.container}>
-        <Text>
-          User is Logged in
-        </Text>
 
-        <Button onPress={this.signOutUser} title ="Sign out"></Button>
-      </View>
-        
+      <MainScreen />
       )
     }
       
