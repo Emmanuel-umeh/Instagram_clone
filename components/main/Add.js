@@ -12,8 +12,16 @@ export default function Add() {
 
   useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestPermissionsAsync();
-      setHasPermission(status === 'granted');
+      const camera_status = await Camera.requestPermissionsAsync();
+      setHasPermission(camera_status.status === 'granted');
+
+
+      if (Platform.OS !== 'web') {
+        const  gallery_status = await ImagePicker.requestMediaLibraryPermissionsAsync();
+        if (gallery_status.status !== 'granted') {
+          alert('Sorry, we need camera roll permissions to make this work!');
+        }
+      }
     })();
   }, []);
 
