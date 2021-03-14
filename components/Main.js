@@ -29,9 +29,19 @@ class Main extends Component {
 
           {currentUser ?
           
-          <Text>
-          {currentUser.name} is Logged in
-        </Text> : 
+        //   <Text>
+        //   {currentUser.name} is Logged in
+        // </Text> 
+        
+
+        <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+        
+        
+        
+        : 
         
         
         <Text>
