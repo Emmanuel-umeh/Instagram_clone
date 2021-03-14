@@ -185,13 +185,14 @@ const styles = StyleSheet.create({
     galleryButton  : {
         // flex : 1,
         // flexDirection : "row",
-        // alignSelf : "flex-end", 
+        alignSelf : "flex-end", 
         // alignItems : "",
         color : "white", 
         fontSize :35,
         marginTop : 10,
         marginLeft : 30,
-        position : "absolute"
+        position : "absolute",
+        
     },
     text : {
         fontSize : 18,
