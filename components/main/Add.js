@@ -119,8 +119,10 @@ export default function Add() {
       </View>
 
       <View style={styles.take_picture_container}>
-        <Button onPress={takePicture}>
-          <Text>Take Picture</Text>
+        <Button onPress={()=>{
+            
+        }}>
+          <Text>Save</Text>
         </Button>
       </View>
 
