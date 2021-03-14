@@ -4,6 +4,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {bindActionCreators} from "redux"
 import {fetchUser}  from "../redux/actions/index"
+
+
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tab = createBottomTabNavigator();
 // connect
 class Main extends Component {
 
