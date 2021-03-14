@@ -104,11 +104,7 @@ if(camera){
 
     </TouchableOpacity>
 
-</View>
-
-
-
-<TouchableOpacity  style={styles.button}   onPress={() => {
+    <TouchableOpacity  style={styles.button}   onPress={() => {
     setType(
       type === Camera.Constants.Type.back
         ? Camera.Constants.Type.front
@@ -126,6 +122,7 @@ if(camera){
 
     </TouchableOpacity>
 
+</View>
 
 <View style= {styles.take_picture_container}>
     <Button onPress = {takePicture} ><Text>Take Picture</Text></Button>
