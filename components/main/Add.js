@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
         flex : 1
     },
     cameraContainer : {
-        flex : 1
+        flex : 1,
+        flexDirection  : "row"
     },
     fixedRatio : {
         flex : 1,
