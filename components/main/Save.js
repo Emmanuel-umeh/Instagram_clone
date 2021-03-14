@@ -1,4 +1,4 @@
-import { View } from 'native-base'
+import { Button, Text, View } from 'native-base'
 import React from 'react'
 import { Image, StyleSheet } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
@@ -17,6 +17,8 @@ export default function Save(props) {
 }} />
 
 <TextInput placeholder = "Write a caption. . ." onChangeText ={setCaption} />
+
+<Button><Text>Save</Text></Button>
      </View>
     )
 }
