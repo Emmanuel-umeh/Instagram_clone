@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet,TouchableOpacity } from 'react-native';
+import { StyleSheet,TouchableOpacity, Image } from 'react-native';
 import { Camera } from 'expo-camera';
-import { Button, Icon, Image, Text, View, } from 'native-base';
+import { Button, Icon, Text, View, } from 'native-base';
 
 export default function Add() {
   const [hasPermission, setHasPermission] = useState(null);
