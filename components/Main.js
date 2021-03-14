@@ -8,6 +8,8 @@ import {fetchUser}  from "../redux/actions/index"
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FeedScreen from './main/Feed'
+import AddScreen from './main/Add'
+import ProfileScreen from './main/Profile'
 
 const Tab = createBottomTabNavigator();
 // connect
@@ -37,7 +39,7 @@ class Main extends Component {
                 }} />
             )
         }} />
-        <Tab.Screen name="Feed" component={FeedScreen} options ={{
+        <Tab.Screen name="Add" component={Add} options ={{
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "plus" style ={{
                     color : color,
@@ -45,7 +47,7 @@ class Main extends Component {
                 }} />
             )
         }} />
-        <Tab.Screen name="Feed" component={FeedScreen} options ={{
+        <Tab.Screen name="Profile" component={Profile} options ={{
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "home" style ={{
                     color : color,
