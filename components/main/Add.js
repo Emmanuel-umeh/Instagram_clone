@@ -35,7 +35,7 @@ export default function Add() {
       
     </View>
     <View style={styles.buttonContainer}>
-<Icon name = "home"
+<Icon name = "swap-horizontal"
   style={styles.button}
   onPress={() => {
     setType(
