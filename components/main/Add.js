@@ -5,6 +5,8 @@ import { Button, Icon, Text, View, } from 'native-base';
 
 export default function Add() {
   const [hasPermission, setHasPermission] = useState(null);
+
+  const [camera, setCamera] = useState(null)
   const [type, setType] = useState(Camera.Constants.Type.back);
 
   useEffect(() => {
@@ -16,7 +18,7 @@ export default function Add() {
 
 
   const takePicture = async() =>{
-      
+
   }
 
   if (hasPermission === null) {
