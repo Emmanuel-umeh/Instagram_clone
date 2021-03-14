@@ -16,7 +16,11 @@ export default function Save(props) {
     const response = await fetch(image);
     const blob = await response.blob();
     const childPath = `post/${firebase.auth().currentUser.uid}/${Math.random().toString(36)}`
-    const task = firebase.storage().ref().child(childPath);
+    const task = firebase.storage().ref().child(childPath).put(blob);
+
+    const taskProgress = snapShot =>{
+        console.log(`transferred : ${snapShot.bytesTransferred}`)
+    }
   };
   return (
     <View style={styles.container}>
