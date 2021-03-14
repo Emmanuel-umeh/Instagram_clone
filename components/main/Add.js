@@ -4,7 +4,7 @@ import { Camera } from 'expo-camera';
 import { Button, Icon, Text, View, } from 'native-base';
 
 export default function Add() {
-  const [hasPermission, setHasPermission] = useState(null);
+  const [hasCameraPermission, setHasCameraPermission] = useState(null);
   const [hasGalleryPermission, setHasGalleryPermission] = useState(null);
 
   const [camera, setCamera] = useState(null)
@@ -14,7 +14,7 @@ export default function Add() {
   useEffect(() => {
     (async () => {
       const camera_status = await Camera.requestPermissionsAsync();
-      setHasPermission(camera_status.status === 'granted');
+      setHasCameraPermission(camera_status.status === 'granted');
 
 
       if (Platform.OS !== 'web') {
@@ -43,10 +43,10 @@ if(camera){
 }
   }
 
-  if (hasPermission === null || hasGalleryPermission === null) {
+  if (hasCameraPermission === null || hasGalleryPermission === null) {
     return <View />;
   }
-  if (hasPermission === false || hasGalleryPermission === null) {
+  if (hasCameraPermission === false || hasGalleryPermission === null) {
     return <Text>No access to camera</Text>;
   }
   return (
