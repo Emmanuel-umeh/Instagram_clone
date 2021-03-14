@@ -49,7 +49,7 @@ class Main extends Component {
         }} />
         <Tab.Screen name="Profile" component={ProfileScreen} options ={{
             tabBarIcon : ({color , size}) =>(
-                <Icon name = "home" style ={{
+                <Icon name = "ios-person" style ={{
                     color : color,
                     fontSize : size
                 }} />
