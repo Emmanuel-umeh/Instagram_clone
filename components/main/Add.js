@@ -5,6 +5,7 @@ import { Button, Icon, Text, View, } from 'native-base';
 
 export default function Add() {
   const [hasPermission, setHasPermission] = useState(null);
+  const [hasPermission, setHasPermission] = useState(null);
 
   const [camera, setCamera] = useState(null)
   const [image, setImage] = useState(null)
