@@ -46,7 +46,7 @@ class Main extends Component {
                 }} />
             )
         }} />
-        <Tab.Screen name="MainAdd" component={EmptyComponent} 
+        <Tab.Screen name="AddContainer" component={EmptyComponent} 
 
         // overriding default tab navigator behavior to make it navigate to an entire new screen and hide the bott
         // om tab navigator
