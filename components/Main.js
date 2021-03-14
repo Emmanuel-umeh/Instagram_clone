@@ -40,9 +40,17 @@ class Main extends Component {
             )
         }} />
         <Tab.Screen name="Add" component={AddScreen} 
+
+        // overriding default tab navigator behavior to make it navigate to an entire new screen and hide the bott
+        // om tab navigator
         listeners = {({
             navigation
-        })}
+        })=>({
+            tabPress : event =>{
+                event.preventDefault();
+                navigation.navigate("Add")
+            }
+        }) }
         
         options ={{
             tabBarIcon : ({color , size}) =>(
