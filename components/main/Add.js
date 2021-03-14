@@ -18,7 +18,9 @@ export default function Add() {
 
 
   const takePicture = async() =>{
-
+if(camera){
+    const data = await camera.takePictureAsync(null)
+}
   }
 
   if (hasPermission === null) {
@@ -34,7 +36,10 @@ export default function Add() {
 
 
     <View style={styles.cameraContainer}>
-      <Camera style={styles.fixedRatio} type={type}
+      
+      <Camera 
+      ref = {ref =>setCamera(ref)}
+      style={styles.fixedRatio} type={type}
       ratio = {'1:1'}
       
       />
