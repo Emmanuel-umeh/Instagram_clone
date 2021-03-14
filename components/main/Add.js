@@ -56,6 +56,10 @@ export default function Add() {
 
 </View>
 
+<View>
+    <Button><Text>Take Picture</Text></Button>
+</View>
+
 
 </View>
   );
