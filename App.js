@@ -13,6 +13,8 @@ import MainScreen from "./components/Main"
 import { Provider } from 'react-redux';
 // import AddScreen from './components/Main/Add'
 import AddScreen from './components/main/Add';
+// import AddScreen from './components/Main/Add'
+import SaveScreen from './components/main/Save';
 // Optionally import the services that you want to use
 //import "firebase/auth";
 //import "firebase/database";
@@ -128,6 +130,7 @@ firebase.auth().onAuthStateChanged((user)=>{
             headerShown : false
           }} />
           <Stack.Screen name = "Add" component = {AddScreen} />
+          <Stack.Screen name = "Save" component = {SaveScreen} />
           {/* <Stack.Screen name = "Register" component = {RegisterScreen} options = {{
             headerShown : false
           }} />
