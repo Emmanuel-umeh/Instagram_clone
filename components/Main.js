@@ -24,34 +24,18 @@ class Main extends Component {
         const {currentUser} = this.props
 
         return (
-      <View style = {styles.container}>
 
-          {currentUser ?
-          
-        //   <Text>
-        //   {currentUser.name} is Logged in
-        // </Text> 
-        
+
 
         <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
         
-        
-        
-        : 
-        
-        
-        <Text>
-        Loading...
-      </Text>
-        }
-       
 
-        <Button onPress={this.signOutUser} ><Text>SignOut</Text></Button>
-      </View> 
-        
+
+        // <Button onPress={this.signOutUser} ><Text>SignOut</Text></Button>
+   
         )
     }
 }
