@@ -106,5 +106,7 @@ const styles = StyleSheet.create({
         // flexDirection : "row", 
         // alignItems : "center",
         // top :300 
+
+        alignSelf : "center"
     }
  }); 
