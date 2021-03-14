@@ -23,7 +23,6 @@ class Main extends Component {
 
         const {currentUser} = this.props
 
-        console.log({currentUser})
         return (
       <View style = {styles.container}>
 
