@@ -9,6 +9,7 @@ import * as firebase from 'firebase';
 
 import { Text, View, StyleSheet, Button } from 'react-native';
 import store from "./store"
+import MainScreen from "./components/Main"
 
 // Optionally import the services that you want to use
 //import "firebase/auth";
