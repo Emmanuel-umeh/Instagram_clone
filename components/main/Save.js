@@ -33,7 +33,7 @@ export default function Save(props) {
         // })
     }
 
-    task.on('state_changed' , taskProgress, taskCompleted, taskError)
+    task.on('state_changed' , taskProgress, taskError, taskCompleted)
   };
   return (
     <View style={styles.container}>
