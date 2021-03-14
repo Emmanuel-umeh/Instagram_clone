@@ -20,6 +20,7 @@ export default function Add() {
   const takePicture = async() =>{
 if(camera){
     const data = await camera.takePictureAsync(null)
+    console.log(data.uri)
 }
   }
 
