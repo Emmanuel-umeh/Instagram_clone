@@ -8,8 +8,10 @@ export async function  fetchUser(){
         if(currentUser.exists){
             dispatch({
                 type : USER_STATE_CHANGED, 
-                currentUser : currentUser.data
+                currentUser : currentUser.data()
             })
+        }else{
+            console.log("no user exists")
         }
     })
 }
