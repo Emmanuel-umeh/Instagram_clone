@@ -27,6 +27,11 @@ export default function Save(props) {
             console.log({snapShot})
         })
     }
+    const taskError = snapShot =>{
+        // snapShot.ref.getDownloadUrl().then((snapshot)=>{
+            console.log({snapShot})
+        // })
+    }
   };
   return (
     <View style={styles.container}>
