@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
         backgroundColor  : "transparent"
     },
     galleryButton  : {
-        flex : 0.15,
+        flex : 1,
         flexDirection : "row",
         alignSelf : "flex-end", 
         // alignItems : "",
