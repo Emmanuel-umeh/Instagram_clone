@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, Image } from "react-native";
 import { Camera } from "expo-camera";
 import { Button, Icon, Text, View } from "native-base";
 import * as ImagePicker from "expo-image-picker";
-export default function Add() {
+export default function Add({navigation}) {
   const [hasCameraPermission, setHasCameraPermission] = useState(null);
   const [hasGalleryPermission, setHasGalleryPermission] = useState(null);
 
@@ -120,7 +120,9 @@ export default function Add() {
 
       <View style={styles.take_picture_container}>
         <Button onPress={()=>{
-            
+            navigation.navigate("Save", {
+                image 
+            })
         }}>
           <Text>Save</Text>
         </Button>
