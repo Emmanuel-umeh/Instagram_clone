@@ -89,6 +89,9 @@ firebase.auth().onAuthStateChanged((user)=>{
         <Stack.Screen name = "Register" component = {RegisterScreen} options = {{
           headerShown : false
         }} />
+        <Stack.Screen name = "Login" component = {RegisterScreen} options = {{
+          headerShown : false
+        }} />
 
       </Stack.Navigator>
     
