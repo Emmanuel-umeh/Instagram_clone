@@ -48,9 +48,10 @@ export default class App extends Component {
 
   componentDidMount(){
 
-    console.log("calling firebase")
 firebase.auth().onAuthStateChanged((user)=>{
   if(!user){
+    
+    console.log("user isnt logged in")
     this.setState({
       loading : true,
       loggedIn : false
