@@ -1,4 +1,4 @@
-import { Button, Text, View } from 'native-base'
+import { Button, Icon, Text, View } from 'native-base'
 import {StyleSheet} from "react-native"
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -30,7 +30,12 @@ class Main extends Component {
 
         <Tab.Navigator>
         <Tab.Screen name="Feed" component={FeedScreen} options ={{
-            tabBarIcon : 
+            tabBarIcon : ({color , size}) =>(
+                <Icon name = "home" style ={{
+                    color : color,
+                    fontSize : size
+                }} />
+            )
         }} />
         {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
       </Tab.Navigator>
