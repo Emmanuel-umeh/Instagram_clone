@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import {bindActionCreators} from "redux"
 import {fetchUser}  from "../redux/actions/index"
 // connect
-export default class Main extends Component {
+class Main extends Component {
 
     constructor(props){
         super(props)
@@ -28,3 +28,8 @@ export default class Main extends Component {
 }
 
 
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+    fetchUser
+}, dispatch)
+
+export default connect(null, mapDispatchToProps)
