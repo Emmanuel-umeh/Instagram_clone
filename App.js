@@ -119,7 +119,21 @@ firebase.auth().onAuthStateChanged((user)=>{
 
         <Provider store = {store}>
 
-<MainScreen />
+
+<Stack.Navigator initialRouteName = "Landing">
+          <Stack.Screen name = "Landing" component = {MainScreen} options = {{
+            headerShown : false
+          }} />
+          {/* <Stack.Screen name = "Register" component = {RegisterScreen} options = {{
+            headerShown : false
+          }} />
+          <Stack.Screen name = "Login" component = {LoginScreen} options = {{
+            headerShown : false
+          }} />
+   */}
+        </Stack.Navigator>
+
+{/* <MainScreen /> */}
         </Provider>
 
       )
