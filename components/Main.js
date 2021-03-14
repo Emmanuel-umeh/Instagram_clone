@@ -37,6 +37,22 @@ class Main extends Component {
                 }} />
             )
         }} />
+        <Tab.Screen name="Feed" component={FeedScreen} options ={{
+            tabBarIcon : ({color , size}) =>(
+                <Icon name = "plus" style ={{
+                    color : color,
+                    fontSize : size
+                }} />
+            )
+        }} />
+        <Tab.Screen name="Feed" component={FeedScreen} options ={{
+            tabBarIcon : ({color , size}) =>(
+                <Icon name = "home" style ={{
+                    color : color,
+                    fontSize : size
+                }} />
+            )
+        }} />
         {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
       </Tab.Navigator>
         
