@@ -27,7 +27,7 @@ export default function Add() {
 
 
     <View style={styles.container}>
-      <Camera style={styles.camera} type={type}
+      <Camera style={styles.fixedRatio} type={type}
       
       />
     </View>
@@ -60,6 +60,10 @@ const styles = StyleSheet.create({
     },
     camera : {
         flex : 1
+    },
+    fixedRatio : {
+        flex : 1,
+        aspectRatio : 1
     },
     buttonContainer : {
         flexDirection : "row",
