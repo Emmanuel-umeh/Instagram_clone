@@ -4,6 +4,7 @@ import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LandingScreen from "./components/auth/Landing"
 import RegisterScreen from "./components/auth/Register"
+import LoginScreen from "./components/auth/Login"
 import * as firebase from 'firebase';
 
 import { Text, View, StyleSheet } from 'react-native';
@@ -89,7 +90,7 @@ firebase.auth().onAuthStateChanged((user)=>{
         <Stack.Screen name = "Register" component = {RegisterScreen} options = {{
           headerShown : false
         }} />
-        <Stack.Screen name = "Login" component = {RegisterScreen} options = {{
+        <Stack.Screen name = "Login" component = {LoginScreen} options = {{
           headerShown : false
         }} />
 
