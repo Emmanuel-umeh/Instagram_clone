@@ -8,6 +8,7 @@ import LoginScreen from "./components/auth/Login"
 import * as firebase from 'firebase';
 
 import { Text, View, StyleSheet, Button } from 'react-native';
+import store from "./store"
 
 // Optionally import the services that you want to use
 //import "firebase/auth";
