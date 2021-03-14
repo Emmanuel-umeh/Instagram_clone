@@ -7,6 +7,7 @@ export default function Add() {
   const [hasPermission, setHasPermission] = useState(null);
 
   const [camera, setCamera] = useState(null)
+  const [image, setImage] = useState(null)
   const [type, setType] = useState(Camera.Constants.Type.back);
 
   useEffect(() => {
@@ -20,7 +21,9 @@ export default function Add() {
   const takePicture = async() =>{
 if(camera){
     const data = await camera.takePictureAsync(null)
-    console.log(data.uri)
+    // console.log(data.uri)
+
+    setImage(data.uri)
 }
   }
 
