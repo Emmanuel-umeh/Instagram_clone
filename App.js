@@ -48,7 +48,7 @@ export default class App extends Component {
 
 
   componentDidMount(){
-
+firebase.auth().onAuthStateChanged
 
   }
   render() {
