@@ -11,7 +11,7 @@ export default function Save(props) {
 
   const [caption, setCaption] = useState("");
 
-  uploadImage = async () => {
+ const  uploadImage = async () => {
     const response = await fetch(image);
     const blob = await response.blob();
     const childPath = `post/${firebase.auth().currentUser.uid}/${Math.random().toString(36)}`
