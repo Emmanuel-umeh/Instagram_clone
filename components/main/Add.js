@@ -44,6 +44,7 @@ export default function Add() {
 
     console.log(result);
 
+    
     if (!result.cancelled) {
       setImage(result.uri);
     }
