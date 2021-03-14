@@ -108,6 +108,9 @@ setType(
 </View>
 
         
+    <View style={styles.galleryContainer}>
+
+       
 <TouchableOpacity  style={styles.galleryButton}   onPress={() => {
 setType(
   type === Camera.Constants.Type.back
@@ -126,6 +129,8 @@ setType(
 
 </TouchableOpacity>
 
+ 
+</View>
 
 
 <View style= {styles.take_picture_container}>
