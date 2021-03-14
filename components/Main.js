@@ -1,9 +1,10 @@
 import { Button, Text, View } from 'native-base'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {bindActionCreators} from "redux"
 
 // connect
-class Main extends Component {
+export default class Main extends Component {
 
     constructor(props){
         super(props)
@@ -27,4 +28,3 @@ class Main extends Component {
 }
 
 
-export default connect(Main)
