@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         alignSelf : "center", 
         alignItems : "center",
         color : "white", 
-        fontSize :20
+        fontSize :40
     },
     text : {
         fontSize : 18,
