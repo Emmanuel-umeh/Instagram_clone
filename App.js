@@ -116,6 +116,8 @@ firebase.auth().onAuthStateChanged((user)=>{
     if(loggedIn){
       return(
 
+        <Provi
+
       <MainScreen />
       )
     }
