@@ -39,7 +39,12 @@ class Main extends Component {
                 }} />
             )
         }} />
-        <Tab.Screen name="Add" component={AddScreen} options ={{
+        <Tab.Screen name="Add" component={AddScreen} 
+        listeners = {({
+            navigation
+        })}
+        
+        options ={{
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "ios-add-circle" style ={{
                     color : color,
