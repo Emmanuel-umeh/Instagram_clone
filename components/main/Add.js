@@ -118,6 +118,12 @@ export default function Add() {
         </Button>
       </View>
 
+      <View style={styles.take_picture_container}>
+        <Button onPress={takePicture}>
+          <Text>Take Picture</Text>
+        </Button>
+      </View>
+
       {image && <Image style={styles.image_preview} source={{ uri: image }} />}
     </View>
   );
