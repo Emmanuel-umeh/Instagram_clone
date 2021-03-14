@@ -118,6 +118,8 @@ firebase.auth().onAuthStateChanged((user)=>{
       return(
 
         <Provider store = {store}>
+<NavigationContainer>
+
 
 
 <Stack.Navigator initialRouteName = "Landing">
@@ -133,6 +135,8 @@ firebase.auth().onAuthStateChanged((user)=>{
    */}
         </Stack.Navigator>
 
+
+        </NavigationContainer>
 {/* <MainScreen /> */}
         </Provider>
 
