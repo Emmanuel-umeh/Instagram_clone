@@ -3,12 +3,18 @@ import React from 'react'
 import { Image, StyleSheet } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 import { useState } from 'react/cjs/react.development'
-
+import firebase from "firebase"
+require("firebase/firestore")
+require("firebase/firebase-storage")
 export default function Save(props) {
     console.log(props.route.params)
     const {image} = props.route.params
 
     const [caption, setCaption] = useState("")
+
+    uploadImage = ()=>{
+
+    }
     return (
      <View style = {styles.container}>
 
@@ -18,7 +24,9 @@ export default function Save(props) {
 
 <TextInput placeholder = "Write a caption. . ." onChangeText ={setCaption} />
 
-<Button><Text>Save</Text></Button>
+<Button block onPress ={()=>{
+    uploadImage()
+}}><Text>Save</Text></Button>
      </View>
     )
 }
