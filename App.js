@@ -12,7 +12,7 @@ import store from "./redux/store"
 import MainScreen from "./components/Main"
 import { Provider } from 'react-redux';
 // import AddScreen from './components/Main/Add'
-import AddScreen from './components/Main/Add';
+import AddScreen from './components/main/Add';
 // Optionally import the services that you want to use
 //import "firebase/auth";
 //import "firebase/database";
