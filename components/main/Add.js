@@ -58,5 +58,8 @@ const styles = StyleSheet.create({
         flex : 0.1,
         alignSelf : "flex-end", 
         alignItems : "center"
+    },
+    text : {
+        fontSize : 10
     }
  }); 
