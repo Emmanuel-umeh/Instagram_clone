@@ -84,7 +84,7 @@ if(camera){
       
     </View>
 
-    {/* <View style={styles.galleryContainer}> */}
+    <View style={styles.galleryContainer}>
 
 
 <TouchableOpacity  style={styles.button}   onPress={() => {
@@ -105,7 +105,27 @@ setType(
 
 </TouchableOpacity>
 
-{/* </View> */}
+</View>
+
+        
+<TouchableOpacity  style={styles.galleryButton}   onPress={() => {
+setType(
+  type === Camera.Constants.Type.back
+    ? Camera.Constants.Type.front
+    : Camera.Constants.Type.back
+);
+}}>
+<Icon style ={{
+    color : "white",
+     fontSize : 35
+}} name = "swap-horizontal"
+
+>
+{/* <Text style={styles.text}> Flip </Text> */}
+</Icon>
+
+</TouchableOpacity>
+
 
 
 <View style= {styles.take_picture_container}>
