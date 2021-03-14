@@ -46,6 +46,14 @@ export default class App extends Component {
     }
   }
 
+  signOutUser = async () => {
+    try {
+        await firebase.auth().signOut();
+    } catch (e) {
+        console.log(e);
+    }
+}
+
 
   componentDidMount(){
 
