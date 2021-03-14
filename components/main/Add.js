@@ -57,13 +57,14 @@ export default function Add() {
 </View>
 
 <View style= {styles.take_picture_container}>
-    <Button><Text>Take Picture</Text></Button>
+    <Button ><Text>Take Picture</Text></Button>
 </View>
 
 
 </View>
   );
 }
+
 
 
 
