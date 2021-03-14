@@ -69,7 +69,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 
     if(!loaded){
       return(
-        <View>
+        <View style = {styles.container}>
           <Text>loading</Text>
         </View>
       )
