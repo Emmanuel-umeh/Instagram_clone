@@ -15,15 +15,15 @@ export default class Login extends Component {
         }
     }
 
-    signUp =  async()=>{
+    signIn =  async()=>{
 
         try {
-            const {email, password, name} = this.state
+            const {email, password} = this.state
 // if(email.length || password || !name){
 //     console.log(
 // }
 
-var response  =await   firebase.auth.createUserWithEmailAndPassword(email,password)
+var response  =await   firebase.auth.signInWithEmailAndPassword(email,password)
 
 console.log({response})
         } catch (error) {
@@ -35,13 +35,7 @@ console.log({response})
         return (
             <View style = {styles.container}>
 
-<TextInput placeholder = "name" onChangeText ={(name)=>{
-    this.setState({
-        name
-    })
-}}
 
-/>
 <TextInput placeholder = "email" onChangeText ={(email)=>{
     this.setState({
         email
@@ -59,7 +53,7 @@ secureTextEntry = {true}
 
 />
 
-<Button title = "Sign Up" onPress = {this.signUp}></Button>
+<Button title = "Sign In" onPress = {this.signIn}></Button>
             </View>
         )
     }
