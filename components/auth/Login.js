@@ -23,7 +23,7 @@ export default class Login extends Component {
 //     console.log(
 // }
 
-var response  =await   firebase.auth.signInWithEmailAndPassword(email,password)
+var response  =await   firebase.auth().signInWithEmailAndPassword(email,password)
 
 console.log({response})
         } catch (error) {
