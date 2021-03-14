@@ -56,7 +56,7 @@ export default function Add() {
 
 </View>
 
-<View>
+<View style= {styles.take_picture_container}>
     <Button><Text>Take Picture</Text></Button>
 </View>
 
@@ -100,5 +100,10 @@ const styles = StyleSheet.create({
         fontSize : 18,
         marginBottom : 10,
         color : "white"
+    },
+    take_picture_container : {
+        flex : 1,
+        flexDirection : "row", 
+        alignItems : "center"
     }
  }); 
