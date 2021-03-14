@@ -164,9 +164,9 @@ const styles = StyleSheet.create({
     },
 
     button  : {
-        flex : 0.15,
-        alignSelf : "center", 
-        alignItems : "center",
+        // flex : 0.15,
+        // alignSelf : "center", 
+        // alignItems : "center",
         color : "white", 
         fontSize :35,
         marginTop : 70,
@@ -179,9 +179,9 @@ const styles = StyleSheet.create({
         backgroundColor  : "transparent"
     },
     galleryButton  : {
-        flex : 1,
-        flexDirection : "row",
-        alignSelf : "flex-end", 
+        // flex : 1,
+        // flexDirection : "row",
+        // alignSelf : "flex-end", 
         // alignItems : "",
         color : "white", 
         fontSize :35,
