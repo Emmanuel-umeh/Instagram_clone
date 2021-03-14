@@ -64,6 +64,11 @@ firebase.auth().onAuthStateChanged((user)=>{
       loggedIn : true
     })
   }
+}).catch(err=>{
+  this.setState({
+    loaded : true,
+    loggedIn : false
+  })
 })
 
   }
