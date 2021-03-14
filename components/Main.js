@@ -30,7 +30,7 @@ class Main extends Component {
 
         <Tab.Navigator>
         <Tab.Screen name="Feed" component={FeedScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
       </Tab.Navigator>
         
 
