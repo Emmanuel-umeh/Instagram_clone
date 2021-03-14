@@ -26,7 +26,7 @@ export default function Add() {
 
 
 
-    <View style={styles.container}>
+    <View style={styles.cameraContainer}>
       <Camera style={styles.fixedRatio} type={type}
       
       />
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     container : {
         flex : 1
     },
-    camera : {
+    cameraContainer : {
         flex : 1
     },
     fixedRatio : {
