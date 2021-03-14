@@ -6,6 +6,7 @@ import LandingScreen from "./components/auth/Landing"
 import RegisterScreen from "./components/auth/Register"
 import * as firebase from 'firebase';
 
+import { Text, View, StyleSheet } from 'react-native';
 
 // Optionally import the services that you want to use
 //import "firebase/auth";
@@ -33,10 +34,6 @@ var firebaseConfig = {
 
 const Stack = createStackNavigator()
 
-
-
-import React, { Component } from 'react'
-import { Text, View } from 'react-native';
 
 export default class App extends Component {
   constructor(props){
@@ -95,3 +92,10 @@ firebase.auth().onAuthStateChanged((user)=>{
   }
 }
 
+
+const styles = StyleSheet.create({
+  container : {
+    flex : 1,
+    justifyContent : "center"
+  }
+})
