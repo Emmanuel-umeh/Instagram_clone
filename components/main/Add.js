@@ -190,7 +190,8 @@ const styles = StyleSheet.create({
         color : "white", 
         fontSize :35,
         marginTop : 10,
-        marginLeft : 30
+        marginLeft : 30,
+        position : "absolute"
     },
     text : {
         fontSize : 18,
