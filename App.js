@@ -11,7 +11,7 @@ import { Text, View, StyleSheet, Button } from 'react-native';
 import store from "./redux/store"
 import MainScreen from "./components/Main"
 import { Provider } from 'react-redux';
-
+import AddScreen from './main/Add'
 // Optionally import the services that you want to use
 //import "firebase/auth";
 //import "firebase/database";

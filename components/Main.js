@@ -8,7 +8,7 @@ import {fetchUser}  from "../redux/actions/index"
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FeedScreen from './main/Feed'
-import AddScreen from './main/Add'
+
 import ProfileScreen from './main/Profile'
 
 const Tab = createBottomTabNavigator();
