@@ -39,3 +39,14 @@ export default function Add() {
     </View>
   );
 }
+
+
+const styles = StyleSheet.create({ 
+
+    container : {
+        flex : 1
+    },
+    camera : {
+        flex : 1
+    }
+ }); 
