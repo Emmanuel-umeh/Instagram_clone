@@ -28,6 +28,7 @@ export default function Add() {
 
     <View style={styles.cameraContainer}>
       <Camera style={styles.fixedRatio} type={type}
+      ratio = {'1:1'}
       
       />
     </View>
