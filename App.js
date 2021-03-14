@@ -10,6 +10,7 @@ import * as firebase from 'firebase';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import store from "./store"
 import MainScreen from "./components/Main"
+import { Provider } from 'react-redux';
 
 // Optionally import the services that you want to use
 //import "firebase/auth";
@@ -116,9 +117,11 @@ firebase.auth().onAuthStateChanged((user)=>{
     if(loggedIn){
       return(
 
-        <Provi
+        <Provider store = {store}>
 
-      <MainScreen />
+<MainScreen />
+        </Provider>
+
       )
     }
       
