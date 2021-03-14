@@ -25,13 +25,15 @@ export default function Save(props) {
     const taskCompleted = snapShot =>{
         snapShot.ref.getDownloadUrl().then((snapshot)=>{
             console.log({snapShot})
-        })
+        }) 
     }
     const taskError = snapShot =>{
         // snapShot.ref.getDownloadUrl().then((snapshot)=>{
             console.log({snapShot})
         // })
     }
+
+    task.on('state_changed' , taskProgress, taskCompleted, taskError)
   };
   return (
     <View style={styles.container}>
