@@ -22,6 +22,6 @@ const store = createStore(
   // persistedReducer,
   composeEnhancers(applyMiddleware(...middleWare))
 );
-export const persistedStore = persistStore(store);
+// export const persistedStore = persistStore(store);
 
 export default store;
