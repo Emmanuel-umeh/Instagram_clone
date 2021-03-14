@@ -10,6 +10,8 @@ export async function  fetchUser(){
         .get()
 
         if(currentUser.exists){
+
+            console.log(currentUser.data())
             dispatch({
                 type : USER_STATE_CHANGED, 
                 currentUser : currentUser.data()
