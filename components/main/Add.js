@@ -43,7 +43,10 @@ export default function Add() {
         : Camera.Constants.Type.back
     );
   }}>
-    <Icon name = "swap-horizontal"
+    <Icon style ={{
+        color : "white",
+         fontSize : 35
+    }} name = "swap-horizontal"
  
 >
   {/* <Text style={styles.text}> Flip </Text> */}
