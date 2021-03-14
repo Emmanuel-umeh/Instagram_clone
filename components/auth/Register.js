@@ -27,6 +27,8 @@ export default class Register extends Component {
 var response  =await   firebase.auth().createUserWithEmailAndPassword(email,password)
 
 console.log({response})
+
+
         } catch (error) {
             console.log({error})
         }
