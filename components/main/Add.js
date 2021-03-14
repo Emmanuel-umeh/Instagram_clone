@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 35,
     marginTop: 60,
-    marginLeft: 30,
+    marginLeft: 20,
   },
 
   galleryContainer: {
