@@ -6,12 +6,12 @@ import {bindActionCreators} from "redux"
 import {fetchUser}  from "../redux/actions/index"
 
 
-import { createBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import FeedScreen from './main/Feed'
 
 import ProfileScreen from './main/Profile'
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 // connect
 
 
