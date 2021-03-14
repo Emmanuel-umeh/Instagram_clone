@@ -40,13 +40,14 @@ export default class App extends Component {
     super(props)
 
     this.state ={
-      loaded : true,
+      loaded : false,
       loggedIn  :false
     }
   }
 
 
   componentDidMount(){
+
 
 firebase.auth().onAuthStateChanged((user)=>{
   if(!user){
