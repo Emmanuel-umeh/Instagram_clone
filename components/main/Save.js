@@ -23,7 +23,7 @@ export default function Save(props) {
       // create date on firebase of creation
       creation : firebase.firestore().FieldValue.serverTimestamp()
     }).then(()=>{
-      
+      navig
     })
   }
 
