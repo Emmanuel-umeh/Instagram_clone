@@ -21,7 +21,7 @@ export default function Save(props, {navigation}) {
       downloadURL,
       caption,
       // create date on firebase of creation
-      creation : firebase.firestore().FieldValue.serverTimestamp()
+      creation : firebase.firestore.FieldValue.serverTimestamp()
     }).then(()=>{
       navigation.popToTop()
     })
