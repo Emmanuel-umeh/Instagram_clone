@@ -12,8 +12,8 @@ export default function Save(props) {
   const [caption, setCaption] = useState("");
 
 
-  const savePostData = ()=>{
-    
+  const savePostData = (downloadURL)=>{
+
   }
 
  const  uploadImage = async () => {
