@@ -11,6 +11,11 @@ export default function Save(props) {
 
   const [caption, setCaption] = useState("");
 
+
+  const savePostData = ()=>{
+    
+  }
+
  const  uploadImage = async () => {
     const response = await fetch(image);
     const blob = await response.blob();
@@ -24,6 +29,8 @@ export default function Save(props) {
     const taskCompleted = () =>{
         task.snapshot.ref.getDownloadURL().then((snapshot)=>{
             console.log({snapshot})
+
+            savePostData(snapshot)
         }) 
     }
     const taskError = snapShot =>{
@@ -31,6 +38,7 @@ export default function Save(props) {
             console.log({snapShot})
         // })
     }
+
 
     task.on('state_changed' , taskProgress, taskError, taskCompleted)
   };
