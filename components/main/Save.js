@@ -5,7 +5,7 @@ import { TextInput } from "react-native-gesture-handler";
 import firebase from "firebase";
 require("firebase/firestore");
 require("firebase/firebase-storage");
-export default function Save(props) {
+export default function Save(props, {navigation}) {
   console.log(props.route.params);
   const { image } = props.route.params;
 
@@ -23,7 +23,7 @@ export default function Save(props) {
       // create date on firebase of creation
       creation : firebase.firestore().FieldValue.serverTimestamp()
     }).then(()=>{
-      navig
+      navigation.popToTop()
     })
   }
 
