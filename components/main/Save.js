@@ -14,6 +14,17 @@ export default function Save(props) {
 
   const savePostData = (downloadURL)=>{
 
+
+    firebase.firestore().collection("posts").doc(
+      firebase.auth().currentUser.uid
+    ).collection("userPosts").add({
+      downloadURL,
+      caption,
+      // create date on firebase of creation
+      creation : firebase.firestore().FieldValue.serverTimestamp()
+    }).then(()=>{
+      
+    })
   }
 
  const  uploadImage = async () => {
