@@ -37,8 +37,9 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
 const styles = StyleSheet.create({
     container : {
         flex :1,
-        alignContent : "center",
-        justifyContent : "center"
+        marginTop : 40
+        // alignContent : "center",
+        // justifyContent : "center"
     },
     containerInfo : {
       margin : 20
