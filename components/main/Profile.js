@@ -48,8 +48,8 @@ class Profile extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.containerInfo}>
-          <Text> {currentUser && currentUser.name}</Text>
-          <Text> {currentUser && currentUser.email}</Text>
+          <Text> {this.state.user && this.state.user.name}</Text>
+          <Text> {this.state.user && this.state.user.email}</Text>
         </View>
 
         <View style={styles.containerGallery}>
