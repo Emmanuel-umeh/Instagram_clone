@@ -26,3 +26,27 @@ export  function  fetchUser(){
      
     })
 }
+
+
+export  function  fetchUserPosts(){
+    return((dispatch ) =>{
+  firebase.firestore().collection('posts').doc(firebase.auth().currentUser.uid)
+        .get().then(currentUser =>{
+            if(currentUser.exists){
+
+
+                // access the current user data
+                // console.log(currentUser.data())
+                dispatch({
+                    type : USER_STATE_CHANGED, 
+                    currentUser : currentUser.data()
+                })
+            }else{
+                console.log("no user exists")
+            }
+
+        })
+
+     
+    })
+}
