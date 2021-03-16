@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const user = (state = initialState, actions) => {
-  switch (action.type) {
+  switch (actions.type) {
     case USER_STATE_CHANGED:
       return {
         ...state,
