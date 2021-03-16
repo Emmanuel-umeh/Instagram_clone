@@ -10,6 +10,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import FeedScreen from './main/Feed'
 
 import ProfileScreen from './main/Profile'
+import SearchScreen from './main/Search'
 
 const Tab = createMaterialBottomTabNavigator();
 // connect
@@ -40,6 +41,14 @@ class Main extends Component {
 
         <Tab.Navigator initialRouteName = "Feed" labeled = {false}>
         <Tab.Screen name="Feed" component={FeedScreen} options ={{
+            tabBarIcon : ({color , size}) =>(
+                <Icon name = "home" style ={{
+                    color : color,
+                    fontSize : 25
+                }} />
+            )
+        }} />
+        <Tab.Screen name="Search" component={SearchScreen} options ={{
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "home" style ={{
                     color : color,
