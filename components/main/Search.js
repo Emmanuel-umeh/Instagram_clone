@@ -16,7 +16,7 @@ export default function Search(props) {
 
                 <TouchableOpacity onPress={()=>{
                     props.navigation.navigate("Profile", {
-                        id : item.id
+                        uid : item.id
                     })
                 }}>
                 <Text>{item.name}</Text>
