@@ -33,10 +33,10 @@ export function fetchUserPosts() {
       .collection("userPosts")
       .orderBy("creation", "asc")
       .get()
-      .then((posts) => {
-        if (posts.exists) {
+      .then((snapshot) => {
+        if (snapshot.exists) {
           // access the current user data
-          // console.log(posts.data())
+          // console.log(snapshot.data())
           dispatch({
             type: USER_POST_STATE_CHANGED,
             posts: posts.data(),
