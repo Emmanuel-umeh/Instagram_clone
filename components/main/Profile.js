@@ -12,7 +12,8 @@ class Profile extends Component {
 
     this.state = {
         userPosts : [],
-        user : null
+        user : null,
+        following : false
     }
   }
 
