@@ -14,7 +14,11 @@ export default function Search(props) {
        
             <ListItem>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>{
+                    props.navigation.navigate("Profile", {
+                        id : item.id
+                    })
+                }}>
                 <Text>{item.name}</Text>
                 </TouchableOpacity>
      
