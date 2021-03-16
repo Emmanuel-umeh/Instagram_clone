@@ -6,6 +6,11 @@ require("firebase/firebase")
 
 export default function Search() {
     const [users, setUsers] = useState([])
+
+
+    const fetchUsers = (search) =>{
+        firebase.firestore.
+    }
     return (
         <div>
             
