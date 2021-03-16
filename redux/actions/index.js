@@ -31,6 +31,7 @@ export  function  fetchUser(){
 export  function  fetchUserPosts(){
     return((dispatch ) =>{
   firebase.firestore().collection('posts').doc(firebase.auth().currentUser.uid)
+  .collection("userPosts")
         .get().then(currentUser =>{
             if(currentUser.exists){
 
