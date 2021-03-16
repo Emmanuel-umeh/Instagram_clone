@@ -39,7 +39,24 @@ export default function Search() {
     }
     return (
      <View>
-        
+         <TextInput placeholder = "Search..." onChangeText = {(search)=>{
+             fetchUsers(search)
+         }} />
+
+<List
+numColumns = {1}
+dataArray = {users}
+horizontal  = {false}
+renderItem = {renderItem}
+>
+         {/* <FlatList 
+         numColumns = {1}
+         data = {users}
+         horizontal = {false}
+         renderItem = {renderItem}
+         
+         /> */}
+  </List>
      </View>
     )
 }
