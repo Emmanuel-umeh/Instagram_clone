@@ -20,6 +20,8 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
 }
 
 
+
+
 const styles = StyleSheet.create({
     container : {
         flex :1,
