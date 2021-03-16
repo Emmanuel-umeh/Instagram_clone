@@ -120,17 +120,11 @@ firebase.auth().onAuthStateChanged((user)=>{
 
 
 <Stack.Navigator initialRouteName = "Landing">
-          <Stack.Screen name = "Landing" component = {MainScreen} options = {{
-            headerShown : false
-          }} />
+          <Stack.Screen name = "Landing" component = {MainScreen} />
           <Stack.Screen name = "Add" component = {AddScreen} />
           <Stack.Screen name = "Save" component = {SaveScreen} navigation = {this.props.navigation} />
-          {/* <Stack.Screen name = "Register" component = {RegisterScreen} options = {{
-            headerShown : false
-          }} />
-          <Stack.Screen name = "Login" component = {LoginScreen} options = {{
-            headerShown : false
-          }} />
+          {/* <Stack.Screen name = "Register" component = {RegisterScreen} />
+          <Stack.Screen name = "Login" component = {LoginScreen} />
    */}
         </Stack.Navigator>
 
