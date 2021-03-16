@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
       margin : 20
     },
     containerGallery : {
-      margin : 20
+     flex : 1
     }
 })
 
