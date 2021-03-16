@@ -14,6 +14,23 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
      
 
      }
+     
+
+
+     renderItems =(items) => {
+         console.log("rendering items!!!!!!!!!!!!!" ,items)
+
+        return(
+            <Image 
+            source =  {{
+                uri : item.downloadURL
+            }}
+    
+            style = {styles.image}
+            />
+        )
+       
+     }
     render() {
         const {currentUser, posts} = this.props
         console.log({currentUser, posts})
@@ -31,13 +48,7 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
 
                     data = {posts}
                     renderItem = {({item}) =>{
-                        <Image 
-                        source =  {{
-                            uri : item.downloadURL
-                        }}
-
-                        style = {styles.image}
-                        />
+                        this.renderItems(item)
                     }}
                 />
 
