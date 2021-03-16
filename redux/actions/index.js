@@ -37,9 +37,17 @@ export function fetchUserPosts() {
         if (snapshot.exists) {
           // access the current user data
           // console.log(snapshot.data())
+
+          let posts = snapshot.docs.map((doc)=>{
+              const data = doc.data()
+              const id = doc.id;
+              return {id, ...data}
+          })
+
+          console.log({posts})
           dispatch({
             type: USER_POST_STATE_CHANGED,
-            posts: posts.data(),
+            posts: posts,
           });
         } else {
           console.log("no user exists");
