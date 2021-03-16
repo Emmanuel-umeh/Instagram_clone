@@ -34,22 +34,11 @@ class Profile extends Component {
         .get()
         .then((snapshot) => {
      
-            // access the current user data
-            // console.log({})
-            // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
-  
-            let posts = snapshot.docs.map((doc)=>{
-                const data = doc.data()
-                const id = doc.id;
-                return {id, ...data}
-            })
-  
-            // console.log({posts})
-            dispatch({
-              type: USER_POST_STATE_CHANGED,
-              posts: posts,
-            });
-         
+          if(snapshot.exists){
+              this.setState({
+                  user : snapshot.data()
+              })
+          }
         });
     
     }
