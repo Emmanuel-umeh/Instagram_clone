@@ -8,7 +8,7 @@ require("firebase/firebase")
 export default function Search() {
     const [users, setUsers] = useState([])
 
-    renderItem = ({item})=>{
+    const renderItem = ({item})=>{
         return(
 
        
