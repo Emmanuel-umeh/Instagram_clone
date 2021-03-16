@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {bindActionCreators} from "redux"
 import {fetchUser, fetchUserPosts}  from "../redux/actions/index"
-
+import firebase from "firebase"
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import FeedScreen from './main/Feed'
