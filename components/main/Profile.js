@@ -18,7 +18,7 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
 
         return (
             <View style = {styles.container}>
-                <Text>hello {currentUser.name}</Text>
+                <Text>hello {currentUser && currentUser.name}</Text>
             </View>
         )
     }
