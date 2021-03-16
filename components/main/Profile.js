@@ -14,6 +14,10 @@ class Profile extends Component {
     }
   }
 
+  componentDidMount(){
+      
+  }
+
 
   renderItem = ({item}) => {
     // console.log("rendering item!!!!!!!!!!!!!", item.downloadURL);
