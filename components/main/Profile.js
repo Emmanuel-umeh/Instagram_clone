@@ -1,4 +1,4 @@
-import { Text, View } from "native-base";
+import { Button, Text, View } from "native-base";
 import React, { Component } from "react";
 import { StyleSheet, FlatList, Image } from "react-native";
 import { connect, bindActionCreators } from "react-redux";
@@ -118,6 +118,12 @@ if(prevState.route.params.uid !== this.props.route.params.uid){
         <View style={styles.containerInfo}>
           <Text> {user && user.name}</Text>
           <Text> {user && user.email}</Text>
+
+          {
+
+            this.props.routes.params.uid !== firebase.auth().currentUser.uid ? 
+            <Button><Text>Follow</Text></Button> : null
+          }
         </View>
 
         <View style={styles.containerGallery}>
