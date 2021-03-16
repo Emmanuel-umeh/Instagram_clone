@@ -1,6 +1,6 @@
 import firebase from "firebase";
 
-import { USER_STATE_CHANGED } from "../constants/index";
+import { USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants/index";
 
 export function fetchUser() {
   return (dispatch) => {
@@ -38,7 +38,7 @@ export function fetchUserPosts() {
           // access the current user data
           // console.log(posts.data())
           dispatch({
-            type: USER_STATE_CHANGED,
+            type: USER_POST_STATE_CHANGED,
             posts: posts.data(),
           });
         } else {
