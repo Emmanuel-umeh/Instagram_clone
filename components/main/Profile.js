@@ -9,7 +9,7 @@ class Profile extends Component {
   }
 
 
-  renderItems = (item) => {
+  renderItem = ({item}) => {
     // console.log("rendering item!!!!!!!!!!!!!", item.downloadURL);
 
     return (
