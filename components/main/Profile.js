@@ -37,9 +37,8 @@ class Profile extends Component {
               numColumns={3}
               horizontal={false}
               data={posts}
-              renderItem={({ item }) => {
-                this.renderItems(item);
-              }}
+              renderItem={renderItem}
+              keyExtractor={item => item.id}
             />
           </View>
         </View>
