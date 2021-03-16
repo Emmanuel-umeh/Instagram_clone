@@ -28,9 +28,9 @@ const styles = StyleSheet.create({
     }
 })
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-    fetchUser, fetchUserPosts
-}, dispatch)
+// const mapDispatchToProps = (dispatch) => bindActionCreators({
+//     fetchUser, fetchUserPosts
+// }, dispatch)
 
 const mapStateToProps =(store)=>({
     currentUser : store.userState.currentUser,
