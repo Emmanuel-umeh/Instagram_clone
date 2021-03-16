@@ -21,7 +21,7 @@ class Profile extends Component {
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
     .doc(props.route.params.uid).
-    set({})
+    delete()
   }
 
   Follow = ()=>{
@@ -29,7 +29,7 @@ class Profile extends Component {
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
     .doc(props.route.params.uid).
-    set({})
+  set({})
   }
 
   componentDidMount() {
