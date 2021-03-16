@@ -7,6 +7,14 @@ require("firebase/firebase")
 export default function Search() {
     const [users, setUsers] = useState([])
 
+    renderItem = ({item})=>{
+        return(
+
+            <View>
+                
+            </View>
+        )    }
+
 
     const fetchUsers = (search) =>{
         firebase.firestore()
@@ -31,6 +39,15 @@ export default function Search() {
          <TextInput onChange = {(search)=>{
              fetchUsers(search)
          }} />
+
+
+         <FlatList 
+         numColumns = {1}
+         data = {users}
+         horizontal = {false}
+         renderItem = {renderItem}
+         
+         />
 
      </View>
     )
