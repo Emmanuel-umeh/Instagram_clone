@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import {Text, View,TextInput,FlatList} from "react-native"
+import {Text, View,TextInput,FlatList, SafeAreaView} from "react-native"
 import { Container, Header, Content, List, ListItem } from 'native-base';
 import firebase from "firebase"
 require("firebase/firestore")
@@ -38,6 +38,8 @@ export default function Search() {
         })
     }
     return (
+
+        <SafeAreaView>
      <View>
          <TextInput placeholder = "Search..." onChangeText = {(search)=>{
              fetchUsers(search)
@@ -58,5 +60,7 @@ renderItem = {renderItem}
          /> */}
   </List>
      </View>
+        </SafeAreaView>
+
     )
 }
