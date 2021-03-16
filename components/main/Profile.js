@@ -26,7 +26,32 @@ class Profile extends Component {
             user : currentUser,
             userPosts : posts
         })
-    }else{
+    }else{  firebase
+        .firestore()
+        .collection("posts")
+        .doc(firebase.auth().currentUser.uid)
+        .collection("userPosts")
+        .orderBy("creation", "asc")
+        .get()
+        .then((snapshot) => {
+     
+            // access the current user data
+            // console.log({})
+            // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
+  
+            let posts = snapshot.docs.map((doc)=>{
+                const data = doc.data()
+                const id = doc.id;
+                return {id, ...data}
+            })
+  
+            // console.log({posts})
+            dispatch({
+              type: USER_POST_STATE_CHANGED,
+              posts: posts,
+            });
+         
+        });
     
     }
 
