@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
-import {Text, View,TextInput,FlatList, StyleSheet} from "react-native"
+import {Text, View,TextInput,FlatList, StyleSheet, TouchableOpacity} from "react-native"
 import { Container, Header, Content, List, ListItem } from 'native-base';
 import firebase from "firebase"
 require("firebase/firestore")
 
-export default function Search() {
+export default function Search(props) {
     const [users, setUsers] = useState([])
 
     const renderItem = ({item})=>{
@@ -13,7 +13,11 @@ export default function Search() {
 
        
             <ListItem>
-              <Text>{item.name}</Text>
+
+                <TouchableOpacity>
+                <Text>{item.name}</Text>
+                </TouchableOpacity>
+     
             </ListItem>
           
         )    }
