@@ -31,6 +31,7 @@ export function fetchUserPosts() {
       .collection("posts")
       .doc(firebase.auth().currentUser.uid)
       .collection("userPosts")
+      .orderBy("creation", "asc")
       .get()
       .then((posts) => {
         if (posts.exists) {
