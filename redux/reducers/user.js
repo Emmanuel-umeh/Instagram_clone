@@ -1,5 +1,6 @@
 const initialState = {
-    currentUser  : null
+    currentUser  : null,
+    posts : []
 }
 
 
