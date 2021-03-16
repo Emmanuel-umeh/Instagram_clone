@@ -18,7 +18,7 @@ class Profile extends Component {
 
   componentDidUpdate(prevState){
 
-    console.log(prevState.route.params.uid)
+    console.log(prevState.route.params.uid, this.props.route.params.uid)
 
 if(prevState.route.params.uid !== this.props.route.params.uid){
 
