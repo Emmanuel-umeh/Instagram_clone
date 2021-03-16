@@ -34,6 +34,8 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
                         source =  {{
                             uri : item.downloadURL
                         }}
+
+                        style = {styles.image}
                         />
                     }}
                 />
@@ -59,6 +61,10 @@ const styles = StyleSheet.create({
     },
     containerGallery : {
      flex : 1
+    },
+    image : {
+        flex : 1,
+        aspectRatio : 1/1
     }
 })
 
