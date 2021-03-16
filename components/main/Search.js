@@ -14,12 +14,21 @@ export default function Search() {
         .where("name" , ">=" , search)
         .get()
         .then((snapshot)=>{
-            
+            let users = snapshot.docs.map((doc)=>{
+                const data = doc.data()
+                const id = doc.id
+
+                return({id, ...data})
+
+            })
+
+
+            setUsers(users)
         })
     }
     return (
-        <div>
-            
-        </div>
+     <View>
+         
+     </View>
     )
 }
