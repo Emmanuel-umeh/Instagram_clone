@@ -6,6 +6,11 @@ import { fetchUser, fetchUserPosts } from "../../redux/actions/index";
 class Profile extends Component {
   constructor(props) {
     super(props);
+
+
+    this.state = {
+        userPosts : []
+    }
   }
 
 
