@@ -3,7 +3,7 @@ import {StyleSheet} from "react-native"
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {bindActionCreators} from "redux"
-import {fetchUser}  from "../redux/actions/index"
+import {fetchUser, fetchUserPosts}  from "../redux/actions/index"
 
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
@@ -28,7 +28,7 @@ class Main extends Component {
 
     componentDidMount(){
         this.props.fetchUser()
-        this.props.fetchPosts()
+        this.props.fetchUserPosts()
     }
     render() {
 
@@ -89,7 +89,7 @@ class Main extends Component {
 
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-    fetchUser
+    fetchUser, fetchUserPosts
 }, dispatch)
 
 const mapStateToProps =(store)=>({
