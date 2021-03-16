@@ -1,6 +1,7 @@
 import { Text, View } from 'native-base'
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
+import { connect } from 'react-redux'
 
 export default class Profile extends Component {
     render() {
