@@ -15,7 +15,7 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
 
      }
     render() {
-
+        const {currentUser, posts} = this.props
         return (
             <View style = {styles.container}>
                 <Text>hello {currentUser && currentUser.name}</Text>
