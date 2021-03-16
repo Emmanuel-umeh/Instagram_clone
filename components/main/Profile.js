@@ -13,7 +13,7 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
         console.log({currentUser, posts})
         return (
             <View style = {styles.container}>
-                <Text>On the Profile page</Text>
+                <Text>hello {currentUser.name}</Text>
             </View>
         )
     }
