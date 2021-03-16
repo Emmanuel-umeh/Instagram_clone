@@ -16,64 +16,8 @@ class Profile extends Component {
     }
   }
 
-  componentDidMount(){
-
-    const {currentUser, posts} = this.props
-
-    console.log("!!!!!!!!!!!!!!!!!", this.props.route.params.uid )
-
-
-    if(this.props.route.params.uid === firebase.auth().currentUser.uid){
-        this.setState({
-            user : currentUser,
-            userPosts : posts
-        })
-    }else{  
-
-        console.log("uid doesnt match current logged user")
-        
-        
-        
-        firebase
-        .firestore()
-        .collection("posts")
-        .doc(this.props.route.params.uid)
-        // .collection("userPosts")
-        .get()
-        .then((snapshot) => {
-     
-          if(snapshot.exists){
-              this.setState({
-                  user : snapshot.data()
-              })
-          }
-        });
-
-        firebase
-        .firestore()
-        .collection("posts")
-        .doc(this.props.route.params.uid)
-        .collection("userPosts")
-        .orderBy("creation", "asc")
-        .get()
-        .then((snapshot) => {
-     
-            // access the current user data
-            // console.log({})
-            // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
-  
-            let posts = snapshot.docs.map((doc)=>{
-                const data = doc.data()
-                const id = doc.id;
-                return {id, ...data}
-            })
-            this.setState({
-                userPosts : posts
-            })
-         
-        });
-    
-    }
+  componentDidUpdate(prevState){
+console.log({prevState})
 
   }
 
