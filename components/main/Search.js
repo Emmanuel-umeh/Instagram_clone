@@ -39,11 +39,7 @@ export default function Search() {
     }
     return (
      <View>
-         <TextInput placeholder = "Search..." onChangeText = {(search)=>{
-             fetchUsers(search)
-         }} />
-
-
+        
      </View>
     )
 }
