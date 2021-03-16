@@ -4,7 +4,13 @@ import { StyleSheet, FlatList, Image } from 'react-native'
 import { connect } from 'react-redux'
 import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
  class Profile extends Component {
+     constructor(props){
+         super(props)
+     }
     render() {
+
+        const {currentUser, posts} = props
+        console.log({currentUser, posts})
         return (
             <View style = {styles.container}>
                 <Text>On the Profile page</Text>
