@@ -21,3 +21,14 @@ const styles = StyleSheet.create({
         justifyContent : "center"
     }
 })
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+    fetchUser, fetchUserPosts
+}, dispatch)
+
+const mapStateToProps =(store)=>({
+    currentUser : store.userState.currentUser
+    
+})
+
+export default connect( mapStateToProps, mapDispatchToProps)(Profile)
