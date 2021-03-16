@@ -39,7 +39,7 @@ export default function Search() {
     }
     return (
      <View>
-         <TextInput onChange = {(search)=>{
+         <TextInput onChangeText = {(search)=>{
              fetchUsers(search)
          }} />
 
