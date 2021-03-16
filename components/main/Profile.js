@@ -39,6 +39,8 @@ class Profile extends Component {
         user: currentUser,
         userPosts: posts,
       });
+    }else {
+      
     }
   }
 
