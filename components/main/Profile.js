@@ -36,10 +36,10 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
         // console.log({currentUser, posts})
         return (
           <View style = {styles.container}>
-                <View style = {styles.containerInfo}>
+                {/* <View style = {styles.containerInfo}>
                 <Text> {currentUser && currentUser.name}</Text>
                 <Text> {currentUser && currentUser.email}</Text>
-            </View>
+            </View> */}
 
             <View style = {styles.containerGallery}>
 
@@ -72,7 +72,8 @@ const styles = StyleSheet.create({
       margin : 20
     },
     containerGallery : {
-     flex : 1
+    //  flex : 1,
+    margin : 10
     },
     image : {
         flex : 1,
