@@ -40,7 +40,43 @@ class Profile extends Component {
         userPosts: posts,
       });
     }else {
-      
+      firebase
+      .firestore()
+      .collection("users")
+      .doc(this.props.route.params.uid)
+      // .collection("userPosts")
+      .get()
+      .then((snapshot) => {
+        console.log(snapshot.data());
+
+        if (snapshot.exists) {
+          this.setState({
+            user: snapshot.data(),
+          });
+        }
+      });
+
+    firebase
+      .firestore()
+      .collection("posts")
+      .doc(this.props.route.params.uid)
+      .collection("userPosts")
+      .orderBy("creation", "asc")
+      .get()
+      .then((snapshot) => {
+        // access the current user data
+        // console.log({})
+        // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
+
+        let posts = snapshot.docs.map((doc) => {
+          const data = doc.data();
+          const id = doc.id;
+          return { id, ...data };
+        });
+        this.setState({
+          userPosts: posts,
+        });
+      });
     }
   }
 
