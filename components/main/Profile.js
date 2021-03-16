@@ -23,7 +23,7 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
         return(
             <Image 
             source =  {{
-                uri : item.downloadURL
+                uri : items.downloadURL
             }}
     
             style = {styles.image}
@@ -33,7 +33,7 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
      }
     render() {
         const {currentUser, posts} = this.props
-        console.log({currentUser, posts})
+        // console.log({currentUser, posts})
         return (
           <View style = {styles.container}>
                 <View style = {styles.containerInfo}>
