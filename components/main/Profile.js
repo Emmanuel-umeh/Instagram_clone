@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { StyleSheet, FlatList, Image } from "react-native";
 import { connect, bindActionCreators } from "react-redux";
 import { fetchUser, fetchUserPosts } from "../../redux/actions/index";
+import firebase from "firebase"
 class Profile extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +16,17 @@ class Profile extends Component {
   }
 
   componentDidMount(){
-      
+
+    const {currentUser, posts} = this.props
+
+
+    if(this.props.route.params.uid === firebase.auth().currentUser.uid){
+        this.setState({
+            user : currentUser,
+            userPosts : posts
+        })
+    }
+
   }
 
 
