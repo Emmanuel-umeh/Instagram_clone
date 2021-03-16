@@ -18,7 +18,7 @@ class Profile extends Component {
 
   componentDidUpdate(prevState){
 console.log({prevState})
-if(prevState.route.params.uid !== firebase.auth().currentUser.uid){
+if(prevState.route.params.uid !== this.props.route.params.uid){
 
     
     const {currentUser, posts} = this.props
@@ -26,12 +26,12 @@ if(prevState.route.params.uid !== firebase.auth().currentUser.uid){
     console.log("!!!!!!!!!!!!!!!!!", this.props.route.params.uid )
 
 
-    // if(this.props.route.params.uid === firebase.auth().currentUser.uid){
-    //     this.setState({
-    //         user : currentUser,
-    //         userPosts : posts
-    //     })
-    // }else{  
+    if(this.props.route.params.uid === firebase.auth().currentUser.uid){
+        this.setState({
+            user : currentUser,
+            userPosts : posts
+        })
+    }else{  
 
         console.log("uid doesnt match current logged user")
         
@@ -76,7 +76,7 @@ if(prevState.route.params.uid !== firebase.auth().currentUser.uid){
          
         });
     
-    // }
+    }
 }
 
   }
