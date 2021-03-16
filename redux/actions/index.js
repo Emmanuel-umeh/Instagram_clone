@@ -36,7 +36,7 @@ export function fetchUserPosts() {
       .then((snapshot) => {
         if (snapshot.exists) {
           // access the current user data
-          // console.log(snapshot.data())
+          console.log(snapshot.doc)
 
           let posts = snapshot.docs.map((doc)=>{
               const data = doc.data()
