@@ -91,13 +91,13 @@ class Profile extends Component {
     );
   };
   render() {
-    const { currentUser, posts } = this.props;
+    const { user, userPosts } = this.state;
     // console.log({currentUser, posts})
     return (
       <View style={styles.container}>
         <View style={styles.containerInfo}>
-          <Text> {this.state.user && this.state.user.name}</Text>
-          <Text> {this.state.user && this.state.user.email}</Text>
+          <Text> {user && user.name}</Text>
+          <Text> {user && user.email}</Text>
         </View>
 
         <View style={styles.containerGallery}>
@@ -105,7 +105,7 @@ class Profile extends Component {
             <FlatList
               numColumns={3}
               horizontal={false}
-              data={posts}
+              data={userPosts}
               renderItem={this.renderItem}
               keyExtractor={item => item.id}
             />
