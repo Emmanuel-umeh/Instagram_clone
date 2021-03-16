@@ -18,7 +18,7 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
 
 
      renderItems =(items) => {
-         console.log("rendering items!!!!!!!!!!!!!" ,items)
+         console.log("rendering items!!!!!!!!!!!!!" ,items.downloadURL)
 
         return(
             <Image 
