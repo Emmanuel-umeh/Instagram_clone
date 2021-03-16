@@ -4,6 +4,7 @@ import { StyleSheet, FlatList, Image } from "react-native";
 import { connect, bindActionCreators } from "react-redux";
 import { fetchUser, fetchUserPosts } from "../../redux/actions/index";
 import firebase from "firebase"
+require("firebase/firestore")
 class Profile extends Component {
   constructor(props) {
     super(props);
@@ -25,6 +26,8 @@ class Profile extends Component {
             user : currentUser,
             userPosts : posts
         })
+    }else{
+    
     }
 
   }
