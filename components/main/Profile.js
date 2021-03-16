@@ -52,7 +52,7 @@ if(prevState.route.params.uid !== this.props.route.params.uid){
         
         firebase
         .firestore()
-        .collection("posts")
+        .collection("users")
         .doc(this.props.route.params.uid)
         // .collection("userPosts")
         .get()
