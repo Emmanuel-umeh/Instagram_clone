@@ -12,6 +12,10 @@ export default function Search() {
         firebase.firestore()
         .collection("users")
         .where("name" , ">=" , search)
+        .get()
+        .then((snapshot)=>{
+            
+        })
     }
     return (
         <div>
