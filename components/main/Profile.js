@@ -3,102 +3,87 @@ import React, { Component } from "react";
 import { StyleSheet, FlatList, Image } from "react-native";
 import { connect, bindActionCreators } from "react-redux";
 import { fetchUser, fetchUserPosts } from "../../redux/actions/index";
-import firebase from "firebase"
-require("firebase/firestore")
+import firebase from "firebase";
+require("firebase/firestore");
 class Profile extends Component {
   constructor(props) {
     super(props);
 
-
     this.state = {
-        userPosts : [],
-        user : null,
-        following : false
+      userPosts: [],
+      user: null,
+      following: false,
+    };
+  }
+
+  componentDidMount() {
+    const { currentUser, posts } = this.props;
+    if (this.props.route.params.uid === firebase.auth().currentUser.uid) {
+      this.setState({
+        user: currentUser,
+        userPosts: posts,
+      });
     }
   }
 
-  componentDidMount(){
-    const {currentUser, posts} = this.props
-    if(this.props.route.params.uid === firebase.auth().currentUser.uid){
+  componentDidUpdate(prevState) {
+    console.log(prevState.route.params.uid, this.props.route.params.uid);
+
+    if (prevState.route.params.uid !== this.props.route.params.uid) {
+      const { currentUser, posts } = this.props;
+
+      console.log("!!!!!!!!!!!!!!!!!", this.props.route.params.uid);
+
+      if (this.props.route.params.uid === firebase.auth().currentUser.uid) {
         this.setState({
-            user : currentUser,
-            userPosts : posts
-        })
-    }
-    
-  }
-
-  componentDidUpdate(prevState){
-
-    console.log(prevState.route.params.uid, this.props.route.params.uid)
-
-if(prevState.route.params.uid !== this.props.route.params.uid){
-
-    
-    const {currentUser, posts} = this.props
-
-    console.log("!!!!!!!!!!!!!!!!!", this.props.route.params.uid )
-
-
-    if(this.props.route.params.uid === firebase.auth().currentUser.uid){
-        this.setState({
-            user : currentUser,
-            userPosts : posts
-        })
-    }else{  
-
-        console.log("uid doesnt match current logged user")
-        
-        
-        
-        firebase
-        .firestore()
-        .collection("users")
-        .doc(this.props.route.params.uid)
-        // .collection("userPosts")
-        .get()
-        .then((snapshot) => {
-
-            console.log(snapshot.data())
-     
-          if(snapshot.exists){
-              this.setState({
-                  user : snapshot.data()
-              })
-          }
+          user: currentUser,
+          userPosts: posts,
         });
+      } else {
+        console.log("uid doesnt match current logged user");
 
         firebase
-        .firestore()
-        .collection("posts")
-        .doc(this.props.route.params.uid)
-        .collection("userPosts")
-        .orderBy("creation", "asc")
-        .get()
-        .then((snapshot) => {
-     
+          .firestore()
+          .collection("users")
+          .doc(this.props.route.params.uid)
+          // .collection("userPosts")
+          .get()
+          .then((snapshot) => {
+            console.log(snapshot.data());
+
+            if (snapshot.exists) {
+              this.setState({
+                user: snapshot.data(),
+              });
+            }
+          });
+
+        firebase
+          .firestore()
+          .collection("posts")
+          .doc(this.props.route.params.uid)
+          .collection("userPosts")
+          .orderBy("creation", "asc")
+          .get()
+          .then((snapshot) => {
             // access the current user data
             // console.log({})
             // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
-  
-            let posts = snapshot.docs.map((doc)=>{
-                const data = doc.data()
-                const id = doc.id;
-                return {id, ...data}
-            })
-            this.setState({
-                userPosts : posts
-            })
-         
-        });
-    
-    }
-}
 
+            let posts = snapshot.docs.map((doc) => {
+              const data = doc.data();
+              const id = doc.id;
+              return { id, ...data };
+            });
+            this.setState({
+              userPosts: posts,
+            });
+          });
+      }
+    }
   }
 
-
-  renderItem = ({item}) => {
+  renderItem = ({ item }) => {
     // console.log("rendering item!!!!!!!!!!!!!", item.downloadURL);
 
     return (
@@ -112,18 +97,26 @@ if(prevState.route.params.uid !== this.props.route.params.uid){
   };
   render() {
     const { user, userPosts } = this.state;
-    console.log({user})
+    console.log({ user });
     return (
       <View style={styles.container}>
         <View style={styles.containerInfo}>
           <Text> {user && user.name}</Text>
           <Text> {user && user.email}</Text>
 
-          {
-
-            this.props.route.params.uid !== firebase.auth().currentUser.uid ? 
-            <Button><Text>Follow</Text></Button> : null
-          }
+          {this.props.route.params.uid !== firebase.auth().currentUser.uid ? (
+            <View>
+              {this.state.following ? (
+                <Button>
+                  <Text>Follow</Text>
+                </Button>
+              ) : (
+                <Button>
+                  <Text>Unfollow</Text>
+                </Button>
+              )}
+            </View>
+          ) : null}
         </View>
 
         <View style={styles.containerGallery}>
@@ -133,7 +126,7 @@ if(prevState.route.params.uid !== this.props.route.params.uid){
               horizontal={false}
               data={userPosts}
               renderItem={this.renderItem}
-              keyExtractor={item => item.id}
+              keyExtractor={(item) => item.id}
             />
           </View>
         </View>
