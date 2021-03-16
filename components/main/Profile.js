@@ -9,7 +9,7 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
      }
     render() {
 
-        const {currentUser, posts} = props
+        const {currentUser, posts} = this.props
         console.log({currentUser, posts})
         return (
             <View style = {styles.container}>
