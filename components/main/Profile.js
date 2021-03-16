@@ -38,4 +38,4 @@ const mapStateToProps =(store)=>({
     
 })
 
-export default connect( mapStateToProps, mapDispatchToProps)(Profile)
+export default connect( mapStateToProps, null)(Profile)
