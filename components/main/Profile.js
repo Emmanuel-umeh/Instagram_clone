@@ -130,7 +130,7 @@ class Profile extends Component {
                 </Button>
               ) : (
                 <Button rounded onPress={()=>{
-                  this.Follow
+                  this.Follow()
                 }}>
                   <Text>Follow</Text>
                 </Button>
