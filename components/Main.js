@@ -50,7 +50,7 @@ class Main extends Component {
         }} />
         <Tab.Screen name="Search" component={SearchScreen} options ={{
             tabBarIcon : ({color , size}) =>(
-                <Icon name = "home" style ={{
+                <Icon name = "search" style ={{
                     color : color,
                     fontSize : 25
                 }} />
