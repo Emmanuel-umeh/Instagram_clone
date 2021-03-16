@@ -39,6 +39,10 @@ export default function Search() {
     }
     return (
      <Container>
+
+         <View>
+
+       
          <TextInput placeholder = "Search..." onChangeText = {(search)=>{
              fetchUsers(search)
          }} />
@@ -57,6 +61,8 @@ renderItem = {renderItem}
          
          /> */}
   </List>
+
+  </View>
      </Container>
     )
 }
