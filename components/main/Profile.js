@@ -17,11 +17,19 @@ class Profile extends Component {
   }
 
   Unfollow = ()=>{
-    firebase.firestore().collection("users").doc("")
+    firebase.firestore().collection("following")
+    .doc(firebase.auth().currentUser.uid)
+    .collection("userFollowing")
+    .doc(props.route.params.uid).
+    set({})
   }
 
   Follow = ()=>{
-
+    firebase.firestore().collection("following")
+    .doc(firebase.auth().currentUser.uid)
+    .collection("userFollowing")
+    .doc(props.route.params.uid).
+    set({})
   }
 
   componentDidMount() {
