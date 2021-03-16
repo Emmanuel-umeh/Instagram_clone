@@ -121,7 +121,7 @@ if(prevState.route.params.uid !== this.props.route.params.uid){
 
           {
 
-            this.props.routes.params.uid !== firebase.auth().currentUser.uid ? 
+            this.props.route.params.uid !== firebase.auth().currentUser.uid ? 
             <Button><Text>Follow</Text></Button> : null
           }
         </View>
