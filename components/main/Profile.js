@@ -16,6 +16,14 @@ class Profile extends Component {
     };
   }
 
+  Unfollow = ()=>{
+    firebase.firestore().collection("users").doc("")
+  }
+
+  Follow = ()=>{
+
+  }
+
   componentDidMount() {
     const { currentUser, posts } = this.props;
     if (this.props.route.params.uid === firebase.auth().currentUser.uid) {
@@ -107,12 +115,14 @@ class Profile extends Component {
           {this.props.route.params.uid !== firebase.auth().currentUser.uid ? (
             <View>
               {this.state.following ? (
-                <Button rounded >
+                <Button rounded  d onPress={()=>{
+                  this.Unfollow()
+                }}>
                   <Text>Following</Text>
                 </Button>
               ) : (
                 <Button rounded onPress={()=>{
-                  this.Unfollow()
+                  this.Follow
                 }}>
                   <Text>Follow</Text>
                 </Button>
