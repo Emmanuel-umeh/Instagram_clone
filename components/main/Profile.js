@@ -108,11 +108,11 @@ class Profile extends Component {
             <View>
               {this.state.following ? (
                 <Button>
-                  <Text>Follow</Text>
+                  <Text>Unfollow</Text>
                 </Button>
               ) : (
                 <Button>
-                  <Text>Unfollow</Text>
+                  <Text>Follow</Text>
                 </Button>
               )}
             </View>
