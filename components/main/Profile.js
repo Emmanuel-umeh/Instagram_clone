@@ -57,6 +57,8 @@ if(prevState.route.params.uid !== this.props.route.params.uid){
         // .collection("userPosts")
         .get()
         .then((snapshot) => {
+
+            console.log(snapshot.data())
      
           if(snapshot.exists){
               this.setState({
