@@ -17,7 +17,16 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
     render() {
         const {currentUser, posts} = this.props
         return (
-          
+          <View style = {styles.container}>
+                <View style = {styles.containerInfo}>
+                <Text> {currentUser && currentUser.name}</Text>
+                <Text> {currentUser && currentUser.email}</Text>
+            </View>
+
+            <View style = {styles.containerGallery}>
+
+            </View>
+          </View>
         )
     }
 }
@@ -32,6 +41,9 @@ const styles = StyleSheet.create({
         justifyContent : "center"
     },
     containerInfo : {
+      margin : 20
+    },
+    containerGallery : {
       margin : 20
     }
 })
