@@ -77,7 +77,17 @@ class Main extends Component {
                 }} />
             )
         }} />
-        <Tab.Screen name="Profile" component={ProfileScreen} options ={{
+        <Tab.Screen name="Profile" 
+           listeners = {({
+            navigation
+        })=>({
+            tabPress : event =>{
+                event.preventDefault();
+                navigation.navigate("Profile", {uid : firebase.auth().currentUser.uid})
+            }
+        }) }
+        
+        component={ProfileScreen} options ={{
             tabBarIcon : ({color , size}) =>(
                 <Icon name = "ios-person" style ={{
                     color : color,
