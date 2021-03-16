@@ -29,11 +29,11 @@ export function fetchUserPosts() {
 
       console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts")
 
-      
+
     firebase
       .firestore()
       .collection("posts")
-      .doc(firebase.auth().curreSntUser.uid)
+      .doc(firebase.auth().currentUser.uid)
       .collection("userPosts")
       .orderBy("creation", "asc")
       .get()
