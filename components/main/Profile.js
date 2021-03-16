@@ -16,6 +16,17 @@ class Profile extends Component {
     }
   }
 
+  componentDidMount(){
+    const {currentUser, posts} = this.props
+    if(this.props.route.params.uid === firebase.auth().currentUser.uid){
+        this.setState({
+            user : currentUser,
+            userPosts : posts
+        })
+    }
+    
+  }
+
   componentDidUpdate(prevState){
 
     console.log(prevState.route.params.uid, this.props.route.params.uid)
