@@ -25,6 +25,19 @@ import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
 
             <View style = {styles.containerGallery}>
 
+                <FlatList numColumns = {3}
+                    horizontal = {false}
+
+                    data = {posts}
+                    renderItem = {({item}) =>{
+                        <Image 
+                        source =  {{
+                            uri : item.downloadURL
+                        }}
+                        />
+                    }}
+                />
+
             </View>
           </View>
         )
