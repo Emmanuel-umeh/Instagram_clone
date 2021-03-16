@@ -20,6 +20,8 @@ class Profile extends Component {
 
     const {currentUser, posts} = this.props
 
+    console.log("!!!!!!!!!!!!!!!!!", this.props.route.params.uid )
+
 
     if(this.props.route.params.uid === firebase.auth().currentUser.uid){
         this.setState({
