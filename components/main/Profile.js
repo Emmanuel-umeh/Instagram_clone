@@ -107,11 +107,11 @@ class Profile extends Component {
           {this.props.route.params.uid !== firebase.auth().currentUser.uid ? (
             <View>
               {this.state.following ? (
-                <Button>
+                <Button rounded>
                   <Text>Unfollow</Text>
                 </Button>
               ) : (
-                <Button>
+                <Button rounded>
                   <Text>Follow</Text>
                 </Button>
               )}
