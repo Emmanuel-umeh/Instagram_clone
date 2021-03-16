@@ -27,7 +27,6 @@ export function fetchUser() {
 export function fetchUserPosts() {
   return (dispatch) => {
 
-      console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts")
 
 
     firebase
@@ -38,7 +37,7 @@ export function fetchUserPosts() {
       .orderBy("creation", "asc")
       .get()
       .then((snapshot) => {
-        if (snapshot.exists) {
+   
           // access the current user data
           console.log({snapshot})
 
@@ -53,9 +52,7 @@ export function fetchUserPosts() {
             type: USER_POST_STATE_CHANGED,
             posts: posts,
           });
-        } else {
-          console.log("no user exists");
-        }
+       
       });
   };
 }
