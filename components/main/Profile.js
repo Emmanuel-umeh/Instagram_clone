@@ -29,9 +29,8 @@ class Profile extends Component {
     }else{  firebase
         .firestore()
         .collection("posts")
-        .doc(firebase.auth().currentUser.uid)
-        .collection("userPosts")
-        .orderBy("creation", "asc")
+        .doc(this.props.route.params.uid)
+        // .collection("userPosts")
         .get()
         .then((snapshot) => {
      
