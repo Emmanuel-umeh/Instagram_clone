@@ -2,8 +2,8 @@ import { Text, View } from 'native-base'
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
-
-export default class Profile extends Component {
+import {fetchUser, fetchUserPosts}  from "../../redux/actions/index"
+ class Profile extends Component {
     render() {
         return (
             <View style = {styles.container}>
