@@ -9,7 +9,9 @@ export default function Search() {
 
 
     const fetchUsers = (search) =>{
-        firebase.firestore.
+        firebase.firestore()
+        .collection("users")
+        .where("name" , ">=" , search)
     }
     return (
         <div>
