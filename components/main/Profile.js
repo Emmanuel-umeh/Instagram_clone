@@ -109,7 +109,7 @@ if(prevState.route.params.uid !== this.props.route.params.uid){
   };
   render() {
     const { user, userPosts } = this.state;
-    // console.log({currentUser, posts})
+    console.log({user})
     return (
       <View style={styles.container}>
         <View style={styles.containerInfo}>
