@@ -20,22 +20,23 @@ export default function Search() {
 
 
     const fetchUsers = (search) =>{
-        firebase.firestore()
-        .collection("users")
-        .where("name" , ">=" , search)
-        .get()
-        .then((snapshot)=>{
-            let users = snapshot.docs.map((doc)=>{
-                const data = doc.data()
-                const id = doc.id
+        // firebase.firestore()
+        // .collection("users")
+        // .where("name" , ">=" , search)
+        // .get()
+        // .then((snapshot)=>{
+        //     let users = snapshot.docs.map((doc)=>{
+        //         const data = doc.data()
+        //         const id = doc.id
 
-                return({id, ...data})
+        //         return({id, ...data})
 
-            })
+        //     })
 
 
-            setUsers(users)
-        })
+        //     setUsers(users)
+        // })
+        console.log("fetch users")
     }
     return (
      <View>
