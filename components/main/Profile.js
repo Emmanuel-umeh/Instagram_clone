@@ -9,7 +9,8 @@ class Profile extends Component {
 
 
     this.state = {
-        userPosts : []
+        userPosts : [],
+        user : null
     }
   }
 
