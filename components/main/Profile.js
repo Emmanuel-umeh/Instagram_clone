@@ -8,9 +8,6 @@ class Profile extends Component {
     super(props);
   }
 
-  componentDidMount() {
-    const { currentUser, posts } = this.props;
-  }
 
   renderItems = (items) => {
     // console.log("rendering items!!!!!!!!!!!!!", items.downloadURL);
