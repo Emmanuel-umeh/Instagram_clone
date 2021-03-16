@@ -11,9 +11,11 @@ export default function Search() {
     renderItem = ({item})=>{
         return(
 
-            <View>
-
-            </View>
+       
+            <ListItem>
+              <Text>{item.name}</Text>
+            </ListItem>
+          
         )    }
 
 
@@ -41,7 +43,7 @@ export default function Search() {
              fetchUsers(search)
          }} />
 
-
+<List>
          <FlatList 
          numColumns = {1}
          data = {users}
@@ -49,7 +51,7 @@ export default function Search() {
          renderItem = {renderItem}
          
          />
-
+  </List>
      </View>
     )
 }
