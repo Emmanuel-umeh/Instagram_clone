@@ -32,13 +32,13 @@ export function fetchUserPosts() {
       .doc(firebase.auth().currentUser.uid)
       .collection("userPosts")
       .get()
-      .then((currentUser) => {
-        if (currentUser.exists) {
+      .then((posts) => {
+        if (posts.exists) {
           // access the current user data
-          // console.log(currentUser.data())
+          // console.log(posts.data())
           dispatch({
             type: USER_STATE_CHANGED,
-            currentUser: currentUser.data(),
+            posts: posts.data(),
           });
         } else {
           console.log("no user exists");
