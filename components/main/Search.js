@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import {Text, View,TextInput,FlatList} from "react-native"
+import { Container, Header, Content, List, ListItem } from 'native-base';
 import firebase from "firebase"
 require("firebase/firebase")
 
@@ -11,7 +12,7 @@ export default function Search() {
         return(
 
             <View>
-                
+
             </View>
         )    }
 
