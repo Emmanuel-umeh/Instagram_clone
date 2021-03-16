@@ -9,13 +9,13 @@ class Profile extends Component {
   }
 
 
-  renderItems = (items) => {
-    // console.log("rendering items!!!!!!!!!!!!!", items.downloadURL);
+  renderItems = (item) => {
+    // console.log("rendering item!!!!!!!!!!!!!", item.downloadURL);
 
     return (
       <Image
         source={{
-          uri: items.downloadURL,
+          uri: item.downloadURL,
         }}
         style={styles.image}
       />
