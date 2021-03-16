@@ -28,7 +28,13 @@ class Profile extends Component {
             user : currentUser,
             userPosts : posts
         })
-    }else{  firebase
+    }else{  
+
+        console.log("uid doesnt match current logged user")
+        
+        
+        
+        firebase
         .firestore()
         .collection("posts")
         .doc(this.props.route.params.uid)
