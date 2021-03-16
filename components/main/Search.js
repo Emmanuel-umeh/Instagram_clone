@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import {Text, View,TextInput,FlatList} from "react-native"
+import {Text, View,TextInput,FlatList, StyleSheet} from "react-native"
 import { Container, Header, Content, List, ListItem } from 'native-base';
 import firebase from "firebase"
 require("firebase/firestore")
@@ -40,7 +40,9 @@ export default function Search() {
     return (
      <Container>
 
-         <View>
+         <View style = {{
+             flex : 1
+         }}>
 
        
          <TextInput placeholder = "Search..." onChangeText = {(search)=>{
