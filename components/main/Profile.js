@@ -20,6 +20,7 @@ function Profile(props) {
 
   const [posts,setPosts] = useState([])
   const [user, setUser] = useState(null)
+  const [following, setFollowing] = useState(null)
   
 
    const Unfollow = ()=>{
