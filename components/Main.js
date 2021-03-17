@@ -30,6 +30,7 @@ class Main extends Component {
     componentDidMount(){
         this.props.fetchUser()
         this.props.fetchUserPosts()
+        this.props.fetchUserFollowing()
     }
     render() {
 
