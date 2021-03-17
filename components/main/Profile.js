@@ -32,6 +32,8 @@ function Profile(props) {
   }
 
   const Follow = ()=>{
+
+    console.log("folowwing!!!!!!!!!!!!!!!")
     firebase.firestore().collection("following")
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
