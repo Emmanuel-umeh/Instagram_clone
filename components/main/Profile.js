@@ -191,7 +191,7 @@ function Profile(props) {
             <FlatList
               numColumns={3}
               horizontal={false}
-              data={userPosts}
+              data={posts}
               renderItem={renderItem}
               keyExtractor={(item) => item.id}
             />
