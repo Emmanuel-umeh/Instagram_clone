@@ -1,7 +1,8 @@
-import { USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants";
+import { USER_FOLLOWING_STATE_CHANGE, USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants";
 
 const initialState = {
   currentUser: null,
+  following : [],
   // my personal posts
   posts: [],
 };
@@ -17,6 +18,11 @@ export const user = (state = initialState, actions) => {
       return {
         ...state,
         posts: actions.posts,
+      };
+    case USER_FOLLOWING_STATE_CHANGE:
+      return {
+        ...state,
+        following: actions.following,
       };
 
     default:

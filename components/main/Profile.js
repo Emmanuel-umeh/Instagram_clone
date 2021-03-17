@@ -1,143 +1,154 @@
 import { Button, Text, View } from "native-base";
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { StyleSheet, FlatList, Image } from "react-native";
 import { connect, bindActionCreators } from "react-redux";
 import { fetchUser, fetchUserPosts } from "../../redux/actions/index";
 import firebase from "firebase";
 require("firebase/firestore");
-class Profile extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      userPosts: [],
-      user: null,
-      following: false,
-    };
-  }
 
-  Unfollow = ()=>{
+function Profile(props) {
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     userPosts: [],
+  //     user: null,
+  //     following: false,
+  //   };
+  // }
+
+  const [posts,setPosts] = useState([])
+  const [user, setUser] = useState(null)
+  
+
+   const Unfollow = ()=>{
     firebase.firestore().collection("following")
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
-    .doc(this.props.route.params.uid).
+    .doc(props.route.params.uid).
     delete()
   }
 
-  Follow = ()=>{
+  const Follow = ()=>{
     firebase.firestore().collection("following")
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
-    .doc(this.props.route.params.uid).
+    .doc(props.route.params.uid).
   set({})
   }
 
-  componentDidMount() {
-    const { currentUser, posts } = this.props;
-    if (this.props.route.params.uid === firebase.auth().currentUser.uid) {
-      this.setState({
-        user: currentUser,
-        userPosts: posts,
-      });
-    }else {
+  useEffect(()=>{
+
+    const { currentUser, posts } = props;
+
+    console.log("!!!!!!!!!!!!!!!!!", props.route.params.uid);
+
+    if (props.route.params.uid === firebase.auth().currentUser.uid) {
+      // this.setState({
+      //   user: currentUser,
+      //   userPosts: posts,
+      // });
+
+      setUser(currentUser)
+      setPosts(posts)
+    } else {
+
+      console.log("uid doesnt match current logged user");
+
       firebase
-      .firestore()
-      .collection("users")
-      .doc(this.props.route.params.uid)
-      // .collection("userPosts")
-      .get()
-      .then((snapshot) => {
-        console.log(snapshot.data());
+        .firestore()
+        .collection("users")
+        .doc(props.route.params.uid)
+        // .collection("userPosts")
+        .get()
+        .then((snapshot) => {
+          console.log(snapshot.data());
 
-        if (snapshot.exists) {
-          this.setState({
-            user: snapshot.data(),
+          if (snapshot.exists) {
+            // this.setState({
+            //   user: snapshot.data(),
+            // });
+            setUser(snapshot.data())
+          }
+        });
+
+      firebase
+        .firestore()
+        .collection("posts")
+        .doc(props.route.params.uid)
+        .collection("userPosts")
+        .orderBy("creation", "asc")
+        .get()
+        .then((snapshot) => {
+          // access the current user data
+          // console.log({})
+          // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
+
+          let posts = snapshot.docs.map((doc) => {
+            const data = doc.data();
+            const id = doc.id;
+            return { id, ...data };
           });
-        }
-      });
+          // this.setState({
+          //   userPosts: posts,
+          // });
 
-    firebase
-      .firestore()
-      .collection("posts")
-      .doc(this.props.route.params.uid)
-      .collection("userPosts")
-      .orderBy("creation", "asc")
-      .get()
-      .then((snapshot) => {
-        // access the current user data
-        // console.log({})
-        // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
-
-        let posts = snapshot.docs.map((doc) => {
-          const data = doc.data();
-          const id = doc.id;
-          return { id, ...data };
+          setPosts(posts)
         });
-        this.setState({
-          userPosts: posts,
-        });
-      });
     }
-  }
+  }, [props.route.params.uid])
 
-  componentDidUpdate(prevState) {
-    console.log(prevState.route.params.uid, this.props.route.params.uid);
+  // componentDidMount() {
+  //   const { currentUser, posts } = props;
+  //   if (props.route.params.uid === firebase.auth().currentUser.uid) {
+  //     this.setState({
+  //       user: currentUser,
+  //       userPosts: posts,
+  //     });
+  //   }else {
+  //     firebase
+  //     .firestore()
+  //     .collection("users")
+  //     .doc(props.route.params.uid)
+  //     // .collection("userPosts")
+  //     .get()
+  //     .then((snapshot) => {
+  //       console.log(snapshot.data());
 
-    if (prevState.route.params.uid !== this.props.route.params.uid) {
-      const { currentUser, posts } = this.props;
+  //       if (snapshot.exists) {
+  //         this.setState({
+  //           user: snapshot.data(),
+  //         });
+  //       }
+  //     });
 
-      console.log("!!!!!!!!!!!!!!!!!", this.props.route.params.uid);
+  //   firebase
+  //     .firestore()
+  //     .collection("posts")
+  //     .doc(props.route.params.uid)
+  //     .collection("userPosts")
+  //     .orderBy("creation", "asc")
+  //     .get()
+  //     .then((snapshot) => {
+  //       // access the current user data
+  //       // console.log({})
+  //       // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
 
-      if (this.props.route.params.uid === firebase.auth().currentUser.uid) {
-        this.setState({
-          user: currentUser,
-          userPosts: posts,
-        });
-      } else {
-        console.log("uid doesnt match current logged user");
+  //       let posts = snapshot.docs.map((doc) => {
+  //         const data = doc.data();
+  //         const id = doc.id;
+  //         return { id, ...data };
+  //       });
+  //       this.setState({
+  //         userPosts: posts,
+  //       });
+  //     });
+  //   }
+  // }
 
-        firebase
-          .firestore()
-          .collection("users")
-          .doc(this.props.route.params.uid)
-          // .collection("userPosts")
-          .get()
-          .then((snapshot) => {
-            console.log(snapshot.data());
-
-            if (snapshot.exists) {
-              this.setState({
-                user: snapshot.data(),
-              });
-            }
-          });
-
-        firebase
-          .firestore()
-          .collection("posts")
-          .doc(this.props.route.params.uid)
-          .collection("userPosts")
-          .orderBy("creation", "asc")
-          .get()
-          .then((snapshot) => {
-            // access the current user data
-            // console.log({})
-            // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
-
-            let posts = snapshot.docs.map((doc) => {
-              const data = doc.data();
-              const id = doc.id;
-              return { id, ...data };
-            });
-            this.setState({
-              userPosts: posts,
-            });
-          });
-      }
-    }
-  }
-
-  renderItem = ({ item }) => {
+ 
+ const  renderItem = ({ item }) => {
     // console.log("rendering item!!!!!!!!!!!!!", item.downloadURL);
 
     return (
@@ -149,26 +160,24 @@ class Profile extends Component {
       />
     );
   };
-  render() {
-    const { user, userPosts } = this.state;
-    console.log({ user });
+
     return (
       <View style={styles.container}>
         <View style={styles.containerInfo}>
           <Text> {user && user.name}</Text>
           <Text> {user && user.email}</Text>
 
-          {this.props.route.params.uid !== firebase.auth().currentUser.uid ? (
+          {props.route.params.uid !== firebase.auth().currentUser.uid ? (
             <View>
               {this.state.following ? (
                 <Button rounded  d onPress={()=>{
-                  this.Unfollow()
+                  Unfollow()
                 }}>
                   <Text>Following</Text>
                 </Button>
               ) : (
                 <Button rounded onPress={()=>{
-                  this.Follow()
+                 Follow()
                 }}>
                   <Text>Follow</Text>
                 </Button>
@@ -183,14 +192,14 @@ class Profile extends Component {
               numColumns={3}
               horizontal={false}
               data={userPosts}
-              renderItem={this.renderItem}
+              renderItem={renderItem}
               keyExtractor={(item) => item.id}
             />
           </View>
         </View>
       </View>
     );
-  }
+  
 }
 
 const styles = StyleSheet.create({
@@ -223,6 +232,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = (store) => ({
   currentUser: store.userState.currentUser,
   posts: store.userState.posts,
+  following : store.userState.following
 });
 
 export default connect(mapStateToProps, null)(Profile);

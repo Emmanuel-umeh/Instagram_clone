@@ -1,6 +1,6 @@
 import firebase from "firebase";
 
-import { USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants/index";
+import { USER_FOLLOWING_STATE_CHANGE, USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants/index";
 
 export function fetchUser() {
   return (dispatch) => {
@@ -52,6 +52,38 @@ export function fetchUserPosts() {
           dispatch({
             type: USER_POST_STATE_CHANGED,
             posts: posts,
+          });
+       
+      });
+  };
+}
+// fetch the users the user is following
+export function fetchUserFollowing() {
+  return (dispatch) => {
+
+
+
+    firebase
+      .firestore()
+      .collection("posts")
+      .doc(firebase.auth().currentUser.uid)
+      .collection("userFollowing")
+      .onSnapshot((snapshot) => {
+   
+          // access the current user data
+          // console.log({})
+          // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user posts" , snapshot)
+
+          let following = snapshot.docs.map((doc)=>{
+
+              const id = doc.id;
+              return {id}
+          })
+
+          // console.log({posts})
+          dispatch({
+            type: USER_FOLLOWING_STATE_CHANGE,
+            following: following,
           });
        
       });
