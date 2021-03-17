@@ -102,7 +102,7 @@ function Profile(props) {
     }
 
     if(props.following.indexOf(props.route.params.uid) > -1){
-
+console.log("updating followuing!!!!!!!")
       setFollowing(true)
 
     }else{
