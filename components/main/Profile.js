@@ -20,7 +20,7 @@ function Profile(props) {
 
   const [posts,setPosts] = useState([])
   const [user, setUser] = useState(null)
-  const [following, setFollowing] = useState(null)
+  const [following, setFollowing] = useState(false)
   
 
    const Unfollow = ()=>{
@@ -101,7 +101,7 @@ function Profile(props) {
 
     if(props.following.indexOf(props.route.params.uid) > -1){
 
-      
+      setFollowing(true)
 
     }
 
