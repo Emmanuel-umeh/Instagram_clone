@@ -33,12 +33,18 @@ function Profile(props) {
 
   const Follow = ()=>{
 
+    try {
+      
     console.log("folowwing!!!!!!!!!!!!!!!")
     firebase.firestore().collection("following")
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
     .doc(props.route.params.uid).
   set({})
+    } catch (error) {
+      console.log({error})
+    }
+
   }
 
   useEffect(()=>{
