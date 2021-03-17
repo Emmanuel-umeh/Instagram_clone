@@ -100,7 +100,9 @@ function Profile(props) {
     }
 
     if(props.following.indexOf(props.route.params.uid) > -1){
+
       
+
     }
 
   }, [props.route.params.uid, props.following])
