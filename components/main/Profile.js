@@ -98,7 +98,7 @@ function Profile(props) {
           setPosts(posts)
         });
     }
-  }, [props.route.params.uid])
+  }, [props.route.params.uid, props.following])
 
   // componentDidMount() {
   //   const { currentUser, posts } = props;
