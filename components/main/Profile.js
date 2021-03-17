@@ -98,6 +98,11 @@ function Profile(props) {
           setPosts(posts)
         });
     }
+
+    if(props.following.indexOf(props.route.params.uid) > -1){
+      
+    }
+
   }, [props.route.params.uid, props.following])
 
   // componentDidMount() {
