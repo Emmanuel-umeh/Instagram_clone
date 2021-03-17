@@ -3,7 +3,7 @@ import {StyleSheet} from "react-native"
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {bindActionCreators} from "redux"
-import {fetchUser, fetchUserPosts}  from "../redux/actions/index"
+import {fetchUser, fetchUserPosts, fetchUserFollowing}  from "../redux/actions/index"
 import firebase from "firebase"
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
@@ -109,7 +109,7 @@ class Main extends Component {
 
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-    fetchUser, fetchUserPosts
+    fetchUser, fetchUserPosts, fetchUserFollowing
 }, dispatch)
 
 const mapStateToProps =(store)=>({
