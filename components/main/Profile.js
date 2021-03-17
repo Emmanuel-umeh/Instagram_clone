@@ -103,6 +103,8 @@ function Profile(props) {
 
       setFollowing(true)
 
+    }else{
+      setFollowing(false)
     }
 
   }, [props.route.params.uid, props.following])
