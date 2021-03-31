@@ -89,6 +89,7 @@ export function fetchUserFollowing() {
           });
 
           for(let i =0; i<following.length; i++){
+            console.log("fetching user!!!!!!!!!!")
             dispatch(fetchUsersData(following[i]))
           }
        
