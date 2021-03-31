@@ -116,6 +116,10 @@ firebase.firestore().collection("users").doc(uid).get()
       type : USERS_DATA_STATE_CHANGED,
       user
     })
+
+    dispatch({
+      fetchUsersFollowingPosts
+    })
   }
 })    }
   })
