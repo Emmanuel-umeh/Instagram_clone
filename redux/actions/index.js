@@ -1,6 +1,6 @@
 import firebase from "firebase";
 
-import { USER_FOLLOWING_STATE_CHANGE, USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants/index";
+import { USERS_DATA_STATE_CHANGED, USER_FOLLOWING_STATE_CHANGE, USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants/index";
 
 export function fetchUser() {
   return (dispatch) => {
@@ -104,8 +104,14 @@ export function fetchUsersData(uid){
 firebase.firestore().collection("users").doc(uid).get()
 .then(snapshot =>{
   if(snapshot.exists){
-    let users = snapshot.data()
+    let user = snapshot.data()
+    user.uid = snapshot.id
     
+
+    dispatch({
+      type : USERS_DATA_STATE_CHANGED,
+      user
+    })
   }
 })    }
   })
