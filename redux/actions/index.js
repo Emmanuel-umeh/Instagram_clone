@@ -134,7 +134,7 @@ firebase.firestore().collection("users").doc(uid).get()
 
 // fetch the postas of the users the current user is foollowing
 export function fetchUsersFollowingPosts(uid) {
-  return (dispatch) => {
+  return (dispatch, getState) => {
 
 
 
