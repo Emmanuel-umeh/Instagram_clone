@@ -157,11 +157,15 @@ export function fetchUsersFollowingPosts(uid) {
           })
 
           // console.log({posts})
+
+          console.log({posts})
           dispatch({
             type: USERS_POSTS_STATE_CHANGED,
             posts: posts,
             uid
           });
+
+          console.log(getState())
        
       });
   };
