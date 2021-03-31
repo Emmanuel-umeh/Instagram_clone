@@ -1,6 +1,6 @@
 import firebase from "firebase";
 
-import { USERS_DATA_STATE_CHANGED, USER_FOLLOWING_STATE_CHANGE, USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants/index";
+import { USERS_DATA_STATE_CHANGED, USERS_POSTS_STATE_CHANGED, USER_FOLLOWING_STATE_CHANGE, USER_POST_STATE_CHANGED, USER_STATE_CHANGED } from "../constants/index";
 
 export function fetchUser() {
   return (dispatch) => {
@@ -150,7 +150,7 @@ export function fetchUsersFollowingPosts(uid) {
 
           // console.log({posts})
           dispatch({
-            type: USER_POST_STATE_CHANGED,
+            type: USERS_POSTS_STATE_CHANGED,
             posts: posts,
           });
        
