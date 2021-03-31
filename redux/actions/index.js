@@ -117,7 +117,9 @@ firebase.firestore().collection("users").doc(uid).get()
   })
 }
 
-export function fetchUsersPosts() {
+
+// fetch the postas of the users the current user is foollowing
+export function fetchUsersFollowingPosts(uid) {
   return (dispatch) => {
 
 
@@ -125,7 +127,7 @@ export function fetchUsersPosts() {
     firebase
       .firestore()
       .collection("posts")
-      .doc(firebase.auth().currentUser.uid)
+      .doc(uid)
       .collection("userPosts")
       .orderBy("creation", "asc")
       .get()
