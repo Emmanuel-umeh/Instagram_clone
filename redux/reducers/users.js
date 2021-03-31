@@ -8,7 +8,7 @@ const initialState = {
 
 };
 
-export const user = (state = initialState, actions) => {
+export const users = (state = initialState, actions) => {
   switch (actions.type) {
     case USERS_DATA_STATE_CHANGED:
       return {
