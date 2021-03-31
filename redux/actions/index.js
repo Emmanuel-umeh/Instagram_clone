@@ -147,7 +147,7 @@ export function fetchUsersFollowingPosts(uid) {
       .get()
       .then((snapshot) => {
 
-console.log("query snapshot!!!!! ",  snapshot)
+console.log("query snapshot!!!!! ",  snapshot.query.EP)
         const uid = snapshot.query.EP.path.segments[1]
 
 
