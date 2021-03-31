@@ -18,7 +18,11 @@ export const user = (state = initialState, actions) => {
     case USERS_POSTS_STATE_CHANGED:
       return {
         ...state,
-        posts: actions.posts,
+        usersLoaded : state.usersLoaded + 1,
+        users : state.users.map(user =>{
+            user.uid === actions.uid ? 
+            {}
+        })
       };
 
     default:
