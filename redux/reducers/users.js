@@ -13,7 +13,7 @@ export const user = (state = initialState, actions) => {
     case USERS_DATA_STATE_CHANGED:
       return {
         ...state,
-        currentUser: actions.currentUser,
+        users: [...state.users, actions.user],
       };
     case USERS_POSTS_STATE_CHANGED:
       return {
