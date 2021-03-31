@@ -89,7 +89,7 @@ export function fetchUserFollowing() {
           });
 
           for(let i =0; i<following.length; i++){
-            dispatch(fetchUsersData)
+            dispatch(fetchUsersData(following[i]))
           }
        
       });
@@ -107,7 +107,7 @@ export function fetchUsersData(uid){
     if(!found){
 firebase.firestore().collection("users").doc(uid).get()
 .then(snapshot =>{
-  if(snapshot.exists){
+  if(snapshot.exists){ 
     let user = snapshot.data()
     user.uid = snapshot.id
     
