@@ -34,8 +34,7 @@ function Profile(props) {
   const Follow = ()=>{
 
     try {
-      
-    console.log("folowwing!!!!!!!!!!!!!!!")
+
     firebase.firestore().collection("following")
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
@@ -51,7 +50,6 @@ function Profile(props) {
 
     const { currentUser, posts } = props;
 
-    console.log("!!!!!!!!!!!!!!!!!", props.following.indexOf(props.route.params.uid));
 
     if (props.route.params.uid === firebase.auth().currentUser.uid) {
       // this.setState({
@@ -108,7 +106,7 @@ function Profile(props) {
     }
 
     if(props.following.indexOf(props.route.params.uid) > -1){
-console.log("updating followuing!!!!!!!")
+
       setFollowing(true)
 
     }else{
