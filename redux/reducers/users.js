@@ -1,6 +1,6 @@
-// reducer for all the users on the platform
+// reducer for all the USERSs on the platform
 
-import { USER_FOLLOWING_STATE_CHANGE, USER_POST_STATE_CHANGED, USERS_STATE_CHANGED } from "../constants";
+import { USERS_FOLLOWING_STATE_CHANGE, USERS_POST_STATE_CHANGED, USERS_STATE_CHANGED } from "../constants";
 
 const initialState = {
   users: [],
@@ -15,12 +15,12 @@ export const user = (state = initialState, actions) => {
         ...state,
         currentUser: actions.currentUser,
       };
-    case USER_POST_STATE_CHANGED:
+    case USERS_POST_STATE_CHANGED:
       return {
         ...state,
         posts: actions.posts,
       };
-    case USER_FOLLOWING_STATE_CHANGE:
+    case USERS_FOLLOWING_STATE_CHANGE:
 
     console.log( actions.following)
       return {
