@@ -98,7 +98,7 @@ export function fetchUsersData(uid){
   return((dispatch, getState)=>{
 
     // check if the user exists in our array
-      const found = getState().usersState
+      const found = getState().usersState.users.some(el =>el.uid === uid)
 
 
   })
