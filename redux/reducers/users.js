@@ -1,0 +1,1 @@
+// reducer for all the users on the platform
