@@ -152,6 +152,7 @@ export function fetchUsersFollowingPosts(uid) {
           dispatch({
             type: USERS_POSTS_STATE_CHANGED,
             posts: posts,
+            uid
           });
        
       });
