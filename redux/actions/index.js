@@ -79,7 +79,7 @@ export function fetchUserFollowing() {
               return {id}
           })
 
-          console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user following" , snapshot.docs)
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user following" , following)
 
 
           // console.log({posts})
