@@ -21,7 +21,7 @@ export const user = (state = initialState, actions) => {
       };
     case USER_FOLLOWING_STATE_CHANGE:
 
-    console.log( actions.following)
+
       return {
         ...state,
         following: actions.following,
