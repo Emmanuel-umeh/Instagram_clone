@@ -82,7 +82,7 @@ export function fetchUserFollowing() {
           console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user following" , following)
 
 
-          // console.log({posts})
+          // console.log({posts}) 
           dispatch({
             type: USER_FOLLOWING_STATE_CHANGE,
             following: following,
