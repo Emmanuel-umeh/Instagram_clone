@@ -132,6 +132,12 @@ export function fetchUsersFollowingPosts(uid) {
       .orderBy("creation", "asc")
       .get()
       .then((snapshot) => {
+
+
+        const uid = snapshot.query.EP.path.segments[1]
+
+
+        console.log({uid})
    
           let posts = snapshot.docs.map((doc)=>{
               const data = doc.data()
