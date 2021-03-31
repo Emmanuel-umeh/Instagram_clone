@@ -20,6 +20,8 @@ export const user = (state = initialState, actions) => {
         posts: actions.posts,
       };
     case USER_FOLLOWING_STATE_CHANGE:
+
+    console.log( actions.following)
       return {
         ...state,
         following: actions.following,
