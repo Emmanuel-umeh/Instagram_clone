@@ -145,7 +145,7 @@ export function fetchUsersFollowingPosts(uid) {
           let posts = snapshot.docs.map((doc)=>{
               const data = doc.data()
               const id = doc.id;
-              return {id, ...data}
+              return {id, ...data, user}
           })
 
           // console.log({posts})
