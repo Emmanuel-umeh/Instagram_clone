@@ -72,13 +72,15 @@ export function fetchUserFollowing() {
    
           // access the current user data
           // console.log({})
-          console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user following" , snapshot.docs)
-
+        
           let following = snapshot.docs.map((doc)=>{
 
               const id = doc.id;
               return {id}
           })
+
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user following" , snapshot.docs)
+
 
           // console.log({posts})
           dispatch({
