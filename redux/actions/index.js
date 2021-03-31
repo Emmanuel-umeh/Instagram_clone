@@ -124,6 +124,8 @@ firebase.firestore().collection("users").doc(uid).get()
     dispatch(
       fetchUsersFollowingPosts(user.id)
     )
+  }else{
+    console.log("xsnapshot does not exist!!")
   }
 })    }
   })
