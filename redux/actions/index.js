@@ -96,7 +96,9 @@ export function fetchUserFollowing() {
 export function fetchUsersData(uid){
 
   return((dispatch, getState)=>{
-      const found 
+
+    // check if the user exists in our array
+      const found = getState().usersState
 
 
   })
