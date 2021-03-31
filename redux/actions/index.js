@@ -65,7 +65,7 @@ export function fetchUserFollowing() {
 
     firebase
       .firestore()
-      .collection("posts")
+      .collection("following")
       .doc(firebase.auth().currentUser.uid)
       .collection("userFollowing")
       .onSnapshot((snapshot) => {
