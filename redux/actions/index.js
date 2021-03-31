@@ -119,6 +119,8 @@ firebase.firestore().collection("users").doc(uid).get()
       user
     })
 
+    console.log("snapshot exists!!!!")
+
     dispatch(
       fetchUsersFollowingPosts(user.id)
     )
