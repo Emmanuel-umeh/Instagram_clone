@@ -51,7 +51,7 @@ function Profile(props) {
 
     const { currentUser, posts } = props;
 
-    console.log("!!!!!!!!!!!!!!!!!", props.following);
+    console.log("!!!!!!!!!!!!!!!!!", props.following.indexOf(props.route.params.uid));
 
     if (props.route.params.uid === firebase.auth().currentUser.uid) {
       // this.setState({
