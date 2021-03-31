@@ -117,9 +117,9 @@ firebase.firestore().collection("users").doc(uid).get()
       user
     })
 
-    dispatch({
-      fetchUsersFollowingPosts
-    })
+    dispatch(
+      fetchUsersFollowingPosts(user.id)
+    )
   }
 })    }
   })
