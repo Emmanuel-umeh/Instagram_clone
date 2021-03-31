@@ -24,8 +24,6 @@ function Profile(props) {
   
 
    const Unfollow = ()=>{
-    setFollowing(false)
-
     firebase.firestore().collection("following")
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
@@ -38,8 +36,6 @@ function Profile(props) {
     try {
       
     console.log("folowwing!!!!!!!!!!!!!!!")
-    setFollowing(true)
-
     firebase.firestore().collection("following")
     .doc(firebase.auth().currentUser.uid)
     .collection("userFollowing")
