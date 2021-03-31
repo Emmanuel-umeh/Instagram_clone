@@ -21,7 +21,7 @@ export const user = (state = initialState, actions) => {
         usersLoaded : state.usersLoaded + 1,
         users : state.users.map(user =>{
             user.uid === actions.uid ? 
-            {}
+            ({...user, posts : actions.posts})
         })
       };
 
