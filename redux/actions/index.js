@@ -105,6 +105,7 @@ export function fetchUsersData(uid){
     // check if the user exists in our array
       const found = getState().usersState.users.some(el =>el.uid === uid)
 
+      console.log({found})
     if(!found){
 firebase.firestore().collection("users").doc(uid).get()
 .then(snapshot =>{
