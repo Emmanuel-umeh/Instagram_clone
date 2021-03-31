@@ -1,6 +1,6 @@
 // reducer for all the USERSs on the platform
 
-import { USERS_FOLLOWING_STATE_CHANGE, USERS_POST_STATE_CHANGED, USERS_STATE_CHANGED } from "../constants";
+import { USERS_FOLLOWING_STATE_CHANGE, USERS_POSTS_STATE_CHANGED, USERS_DATA_STATE_CHANGED } from "../constants";
 
 const initialState = {
   users: [],
@@ -10,12 +10,12 @@ const initialState = {
 
 export const user = (state = initialState, actions) => {
   switch (actions.type) {
-    case USERS_STATE_CHANGED:
+    case USERS_DATA_STATE_CHANGED:
       return {
         ...state,
         currentUser: actions.currentUser,
       };
-    case USERS_POST_STATE_CHANGED:
+    case USERS_POSTS_STATE_CHANGED:
       return {
         ...state,
         posts: actions.posts,
