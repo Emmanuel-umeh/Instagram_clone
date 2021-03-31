@@ -91,3 +91,11 @@ export function fetchUserFollowing() {
       });
   };
 }
+
+// fetch data for all the users
+export function fetchUsersData(uid){
+
+  return((dispatch, getState)=>{
+    
+  })
+}
