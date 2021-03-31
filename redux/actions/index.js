@@ -148,7 +148,7 @@ export function fetchUsersFollowingPosts(uid) {
       .then((snapshot) => {
 
 console.log("query snapshot!!!!! ",  snapshot.query)
-        const uid = snapshot.query.Ff.path.segments[1]
+        const uid = snapshot.query.Xf.path.segments[1]
 
 
         console.log({snapshot, uid})
