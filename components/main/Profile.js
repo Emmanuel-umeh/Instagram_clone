@@ -187,7 +187,7 @@ console.log("updating followuing!!!!!!!")
 
           {props.route.params.uid !== firebase.auth().currentUser.uid ? (
             <View>
-              {following ? (
+              {!following ? (
                 <Button rounded   onPress={()=>{
                   Unfollow()
                 }}>
