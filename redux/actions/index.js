@@ -76,7 +76,8 @@ export function fetchUserFollowing() {
           let following = snapshot.docs.map((doc)=>{
 
               const id = doc.id;
-              return id
+              return 
+              
           })
 
           console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fetching user following" , following)
